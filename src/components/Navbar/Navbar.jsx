@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import classes from './Navbar.module.css';
 
 import { ReactComponent as HomeIcon } from '../../assets/svg/home.svg';
 import { ReactComponent as SocksIcon } from '../../assets/svg/socks.svg';
@@ -10,33 +9,33 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className={classes.navbar}>
-      <ul className={classes.navbarList}>
+    <nav className="navbar">
+      <ul className="navbar__items">
         <li
-          className={classes.navbarListItem}
+          className="navbar__item"
           onClick={() => {
             navigate('/');
           }}
         >
-          <HomeIcon className={classes.navbarIcon}></HomeIcon>
+          <HomeIcon className="navbar__item-icon"></HomeIcon>
           Domů
         </li>
         <li
-          className={classes.navbarListItem}
+          className="navbar__item"
           onClick={() => {
             navigate('/products');
           }}
         >
-          <SocksIcon className={classes.navbarIcon}></SocksIcon>
+          <SocksIcon className="navbar__item-icon"></SocksIcon>
           Produkty
         </li>
         <li
-          className={classes.navbarListItem}
+          className="navbar__item"
           onClick={() => {
             navigate('/contact');
           }}
         >
-          <ContactIcon className={classes.navbarIcon}></ContactIcon>
+          <ContactIcon className="navbar__item-icon"></ContactIcon>
           Kontakt
         </li>
       </ul>
