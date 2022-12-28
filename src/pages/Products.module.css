@@ -1,0 +1,42 @@
+.categoriesContainer {
+  padding-top: 10vh;
+  height: 90vh;
+  background-image: url('../assets/background/pink-circles.svg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-light);
+  text-decoration: none;
+  padding: 2rem 1rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  height: 28vh;
+}
+
+.category:first-of-type {
+  transform: rotateZ(-5deg);
+}
+
+.category:last-of-type {
+  transform: rotateZ(5deg);
+}
+
+.categoryImage {
+  width: 90%;
+}
+
+.categoryName {
+  font-size: 3rem;
+  color: var(--primary-grey);
+  font-family: var(--font-secondary);
+}
