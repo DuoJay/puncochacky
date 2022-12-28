@@ -1,6 +1,10 @@
 @import 'abstracts/variables';
 
 @import 'base/reset';
+@import 'base/typography';
 
 @import 'components/header';
 @import 'components/navbar';
+
+@import 'pages/home';
+@import 'pages/products';

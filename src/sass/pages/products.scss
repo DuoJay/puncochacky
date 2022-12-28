@@ -1,4 +1,4 @@
-.categoriesContainer {
+.categories-container {
   padding-top: 10vh;
   height: 90vh;
   background-image: url('../assets/background/pink-circles.svg');
@@ -21,22 +21,22 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 50vw;
   height: 28vh;
-}
 
-.category:first-of-type {
-  transform: rotateZ(-5deg);
-}
+  &:first-of-type {
+    transform: rotateZ(-5deg);
+  }
 
-.category:last-of-type {
-  transform: rotateZ(5deg);
-}
+  &:last-of-type {
+    transform: rotateZ(5deg);
+  }
 
-.categoryImage {
-  width: 90%;
-}
+  &__image {
+    width: 90%;
+  }
 
-.categoryName {
-  font-size: 3rem;
-  color: var(--primary-grey);
-  font-family: var(--font-secondary);
+  &__name {
+    font-size: 3rem;
+    color: var(--primary-grey);
+    font-family: var(--font-secondary);
+  }
 }
