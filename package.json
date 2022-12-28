@@ -36,14 +36,5 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "since 2010"
-    ]
-  }
+  "browserslist": "since 2010"
 }
