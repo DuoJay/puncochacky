@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import socksGreen from '../assets/images/socks-green.jpg';
 
 function Home() {
   const navigate = useNavigate();
@@ -17,14 +18,19 @@ function Home() {
       </section>
       <section className="background-one"></section>
       <section className="info">
-        <h2 className="info__heading">To nejlepší pro děti</h2>
-        <p className="info__paragraph">
-          Při výrobě byly použiy jen ty <span>nejkvalitnější</span> suroviny pro
-          pohodlí a zdraví. Ponožky se vyrábí z kvalitní <span>bavlny</span> a{' '}
-          <span>bambusu</span> který je hypoalergenní a jemnný na dotek. Také
-          obsahují <span>aloe vera</span> jež má pozitivní účinky na pokožku a
-          zdraví.
-        </p>
+        <div className="info__text">
+          <h2 className="info__text-heading">To nejlepší pro děti</h2>
+          <p className="info__text-paragraph">
+            Při výrobě byly použiy jen ty <span>nejkvalitnější</span> suroviny
+            pro pohodlí a zdraví. Ponožky se vyrábí z kvalitní{' '}
+            <span>bavlny</span> a <span>bambusu</span> který je hypoalergenní a
+            jemnný na dotek. Také obsahují <span>aloe vera</span> jež má
+            pozitivní účinky na pokožku a zdraví.
+          </p>
+        </div>
+        <div className="info__image">
+          <img src={socksGreen} alt="ponožky" />
+        </div>
       </section>
       <section className="background-two"></section>
       <section className="cta">

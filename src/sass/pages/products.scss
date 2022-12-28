@@ -1,5 +1,5 @@
 .categories-container {
-  padding-top: 10vh;
+  padding-top: 16.5rem;
   height: 90vh;
   background-image: url('../assets/background/pink-circles.svg');
   display: flex;
@@ -7,36 +7,62 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
+
+  @include device(tablet-port) {
+    flex-direction: row;
+  }
+
+  @include device(desktop) {
+    gap: 15rem;
+  }
 }
 
 .category {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary-light);
-  text-decoration: none;
-  padding: 2rem 1rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 50vw;
-  height: 28vh;
+  @extend .polaroid;
+
+  @include device(tablet-land) {
+    width: 300px;
+    height: 360px;
+  }
 
   &:first-of-type {
-    transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg) translate(-20px, 10px);
+
+    @include device(tablet-port) {
+      transform: rotateZ(-25deg) translate(-20px, 10px);
+    }
+    @include device(tablet-land) {
+      transform: rotateZ(-15deg) translate(-20px, 10px);
+    }
+
+    @include device(desktop) {
+      transform: rotateZ(-15deg) translate(-20px, 10px);
+    }
   }
 
   &:last-of-type {
-    transform: rotateZ(5deg);
+    transform: rotateZ(8deg) translate(20px, -10px);
+    @include device(tablet-port) {
+      transform: rotateZ(15deg) translate(-10px, -50px);
+    }
   }
 
   &__image {
     width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   &__name {
-    font-size: 3rem;
+    font-size: 4rem;
+    letter-spacing: 0.7rem;
     color: var(--primary-grey);
     font-family: var(--font-secondary);
+  }
+
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
   }
 }
