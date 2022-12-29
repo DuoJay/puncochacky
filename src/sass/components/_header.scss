@@ -1,7 +1,7 @@
 .header {
   position: absolute;
   width: 100%;
-  height: 16;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,14 +9,13 @@
   padding: 1rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
   background-color: var(--primary-light);
+  z-index: 100;
 
   &__logo {
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
     height: 100%;
 
     &-img {
-      width: 100%;
+      height: 100%;
     }
   }
 }
