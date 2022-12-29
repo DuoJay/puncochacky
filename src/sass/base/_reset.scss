@@ -16,4 +16,11 @@ html {
 body {
   box-sizing: border-box;
   font-family: var(--font-primary);
+  color: var(--primary-grey);
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
 }

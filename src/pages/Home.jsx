@@ -19,7 +19,7 @@ function Home() {
       <section className="background-one"></section>
       <section className="info">
         <div className="info__text">
-          <h2 className="info__text-heading">To nejlepší pro děti</h2>
+          <h2 className="info__text-heading h2">To nejlepší pro děti</h2>
           <p className="info__text-paragraph">
             Při výrobě byly použiy jen ty <span>nejkvalitnější</span> suroviny
             pro pohodlí a zdraví. Ponožky se vyrábí z kvalitní{' '}
@@ -34,9 +34,9 @@ function Home() {
       </section>
       <section className="background-two"></section>
       <section className="cta">
-        <h2 className="cta__heading">Co nabízíme</h2>
+        <h2 className="cta__heading h2">Co nabízíme</h2>
         <p className="cta__paragraph">
-          Kromě dětských punčocháčků s <span>kšandy</span> nebo bez, si mužete
+          Kromě dětských punčocháčků s <span>kšandy</span> nebo bez, si můžete
           také vybrat z <span>ponožek</span> jak pro <span>děti</span>, tak pro
           dospělé.
         </p>

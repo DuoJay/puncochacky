@@ -1,0 +1,44 @@
+.contact {
+  &__container {
+    background-image: url('../assets/background/green-circles.svg');
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-light);
+    width: 80vw;
+
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 11px 11px 22px #e6e6e6, -11px -11px 22px #ffffff;
+
+    &-span {
+      font-weight: 700;
+      font-size: 2.3rem;
+      color: var(--primary-green);
+    }
+
+    &-icon {
+      fill: var(--primary-green);
+      width: 32px;
+      margin-right: auto;
+    }
+  }
+}

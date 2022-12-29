@@ -34,6 +34,18 @@ html {
 body {
   box-sizing: border-box;
   font-family: var(--font-primary);
+  color: var(--primary-grey);
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.h2 {
+  color: var(--primary-grey);
+  font-size: 4rem;
 }
 
 .highlight-pink, .info__text-paragraph span:nth-of-type(1) {
@@ -150,7 +162,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--primary-grey);
   height: 50vh;
   gap: 3rem;
 }
@@ -212,9 +223,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-}
-.info__text-heading {
-  font-size: 4rem;
 }
 .info__text-paragraph {
   font-size: 2.8rem;
@@ -363,6 +371,43 @@ body {
 }
 .category:hover, .category:active {
   transform: scale(1.1);
+}
+
+.contact__container {
+  background-image: url("../assets/background/green-circles.svg");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.contact__heading {
+  text-align: center;
+}
+.contact__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-light);
+  width: 80vw;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 11px 11px 22px #e6e6e6, -11px -11px 22px #ffffff;
+}
+.contact__item-span {
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: var(--primary-green);
+}
+.contact__item-icon {
+  fill: var(--primary-green);
+  width: 32px;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
