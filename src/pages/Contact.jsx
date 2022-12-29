@@ -10,7 +10,9 @@ function Contact() {
       </h2>
       <div className="contact__item">
         <AtIcon className="contact__item-icon"></AtIcon>
-        <span className="contact__item-span">puncochacky@email.com</span>
+        <span className="contact__item-span">
+          <a href="mailto: puncochacky@email.com">puncochacky@email.com</a>
+        </span>
       </div>
       <div className="contact__item">
         <PhoneIcon className="contact__item-icon"></PhoneIcon>
