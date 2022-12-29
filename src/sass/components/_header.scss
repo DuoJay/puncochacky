@@ -11,6 +11,10 @@
   background-color: var(--primary-light);
   z-index: 100;
 
+  @include device(tablet-land) {
+    height: 12rem;
+  }
+
   &__logo {
     height: 100%;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { ReactComponent as HomeIcon } from '../../assets/svg/home.svg';
 import { ReactComponent as SocksIcon } from '../../assets/svg/socks.svg';
@@ -7,12 +7,21 @@ import { ReactComponent as ContactIcon } from '../../assets/svg/contact.svg';
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const pathMatchRoute = route => {
+    if (route === location.pathname) {
+      return true;
+    }
+  };
+
+  console.log(location.pathname);
 
   return (
     <nav className="navbar">
       <ul className="navbar__items">
         <li
-          className="navbar__item"
+          className={`navbar__item ${pathMatchRoute('/') && 'on-this-page'}`}
           onClick={() => {
             navigate('/');
           }}
@@ -21,7 +30,9 @@ function Navbar() {
           Domů
         </li>
         <li
-          className="navbar__item"
+          className={`navbar__item ${
+            pathMatchRoute('/products') && 'on-this-page'
+          }`}
           onClick={() => {
             navigate('/products');
           }}
@@ -30,7 +41,9 @@ function Navbar() {
           Produkty
         </li>
         <li
-          className="navbar__item"
+          className={`navbar__item ${
+            pathMatchRoute('/contact') && 'on-this-page'
+          }`}
           onClick={() => {
             navigate('/contact');
           }}
