@@ -14,10 +14,14 @@
 .background-two {
   background-image: url('../assets/logo/snura-transparent.png');
   min-height: 35rem;
-  background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: 50% 50%;
+  @supports not (-webkit-touch-callout: none) {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
 
 .background-two {
