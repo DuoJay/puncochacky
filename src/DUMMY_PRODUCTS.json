@@ -1,0 +1,11 @@
+{
+  "products": {
+    "socks": [
+      {
+        "name": "Modrý Motýlek",
+        "size": "50-56",
+        "imgUrls": "https://cdn.shopify.com/s/files/1/0004/3712/5184/products/Elf-01_900x_e4e6f216-a1a4-47bf-9674-50532802c23e_large.webp?v=1661868254"
+      }
+    ]
+  }
+}

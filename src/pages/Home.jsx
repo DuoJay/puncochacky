@@ -9,7 +9,8 @@ function Home() {
     <>
       <section className="hero">
         <h1 className="hero__title">
-          Punčocháčky a ponožky <span>LUANA</span>
+          Punčocháčky a ponožky <span>LOANA</span>
+          {/* SUB WITH LOANA LOGO */}
         </h1>
         <p className="hero__paragraph">
           Výprodej skladových zásob znamé, kvalitní <span>české</span> značky za

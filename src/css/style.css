@@ -409,5 +409,18 @@ a {
   width: 32px;
   margin-right: auto;
 }
+.contact__itema {
+  cursor: pointer;
+}
+
+.socks__container {
+  background-image: url("../assets/background/pink-circles.svg");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /*# sourceMappingURL=style.css.map */

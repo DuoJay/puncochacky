@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-import { ReactComponent as HomeIcon } from '../../assets/svg/home.svg';
-import { ReactComponent as SocksIcon } from '../../assets/svg/socks.svg';
-import { ReactComponent as ContactIcon } from '../../assets/svg/contact.svg';
+import { ReactComponent as HomeIcon } from '../assets/svg/home.svg';
+import { ReactComponent as SocksIcon } from '../assets/svg/socks.svg';
+import { ReactComponent as ContactIcon } from '../assets/svg/contact.svg';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -14,8 +14,6 @@ function Navbar() {
       return true;
     }
   };
-
-  console.log(location.pathname);
 
   return (
     <nav className="navbar">
