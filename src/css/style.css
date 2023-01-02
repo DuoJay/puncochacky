@@ -84,7 +84,6 @@ a {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 200px;
-  min-height: 240px;
 }
 
 .header {
@@ -308,7 +307,7 @@ a {
 
 .categories-container {
   padding-top: 10rem;
-  height: 90vh;
+  height: 100vh;
   background-image: url("../assets/background/pink-circles.svg");
   display: flex;
   flex-direction: column;
@@ -429,10 +428,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 14rem;
+  padding-bottom: 14rem;
 }
 .category__items {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
 }

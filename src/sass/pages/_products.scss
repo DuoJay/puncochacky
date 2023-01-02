@@ -1,6 +1,6 @@
 .categories-container {
   padding-top: 10rem;
-  height: 90vh;
+  height: 100vh;
   background-image: url('../assets/background/pink-circles.svg');
   display: flex;
   flex-direction: column;
@@ -19,7 +19,6 @@
 
 .category {
   @extend .polaroid;
-
   @include device(sm-phone) {
     width: 150px;
     height: 180px;
