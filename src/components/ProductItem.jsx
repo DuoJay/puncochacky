@@ -30,14 +30,14 @@ function ProductItem({ product }) {
 
   return (
     <li className="product polaroid">
-      <h3 className="product__name h3">{product.name}</h3>
-      <span className="product__size">Velikost: {translateSize(product)}</span>
       <img
         className="product__images"
         src={product.imgUrls[0]}
         alt="obrázek ponožek"
         width={'200px'}
       />
+      <h3 className="product__name h3">{product.name}</h3>
+      <span className="product__size">Velikost: {translateSize(product)}</span>
     </li>
   );
 }
