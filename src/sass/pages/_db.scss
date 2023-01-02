@@ -1,0 +1,35 @@
+.db {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+
+    &-label {
+      font-size: 2rem;
+    }
+    &-input {
+      font-size: 2rem;
+    }
+
+    &-button {
+      border: none;
+      background-color: var(--primary-pink);
+      color: white;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+  input,
+  select {
+    margin-bottom: 1.5rem;
+  }
+}

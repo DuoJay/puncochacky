@@ -160,7 +160,10 @@ a {
 }
 
 .product__images {
-  padding: 0 1rem 0rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 90%;
+  margin: 1rem;
 }
 
 .hero,
@@ -436,6 +439,39 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
+}
+
+.db {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.db__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vw;
+}
+.db__form-label {
+  font-size: 2rem;
+}
+.db__form-input {
+  font-size: 2rem;
+}
+.db__form-button {
+  border: none;
+  background-color: var(--primary-pink);
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.db input,
+.db select {
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
