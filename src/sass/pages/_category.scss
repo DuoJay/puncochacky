@@ -1,0 +1,16 @@
+.category {
+  &__container {
+    background-image: url('../assets/background/pink-circles.svg');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+}
