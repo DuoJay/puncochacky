@@ -5,18 +5,22 @@ import adults from '../assets/images/adults.jpg';
 
 function Products() {
   return (
-    <div className="categories-container">
-      <Link className="category" to={'/products/socks'}>
-        <img className="category__image" src={socksPink} alt="ponožky" />
-        <span className="category__name">Ponožky</span>
+    <div className="products-category-container">
+      <Link className="product-category" to={'/products/socks'}>
+        <div className="product-category__image-socks"></div>
+        <span className="product-category__name">ponožky</span>
       </Link>
-      <Link className="category" to={'/products/stockings'}>
-        <img className="category__image" src={stockingsBlue} alt="punčošky" />
-        <span className="category__name">Punčošky</span>
+      <Link className="product-category" to={'/products/stockings'}>
+        <div className="product-category__image-stockings"></div>
+        <span className="product-category__name">punčošky</span>
       </Link>
-      <Link className="category" to={'/products/adults'}>
-        <img className="category__image" src={adults} alt="pro dospělé" />
-        <span className="category__name">Pro dospělé</span>
+      <Link
+        className="product-category"
+        to={'/products/adults'}
+        id="products-adults"
+      >
+        <div className="product-category__image-adults"></div>
+        <span className="product-category__name">pro dospělé</span>
       </Link>
     </div>
   );

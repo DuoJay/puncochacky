@@ -1,64 +1,54 @@
-.categories-container {
-  margin-top: var(--header-height);
-  height: var(--content-height);
+.products-category-container {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+  padding: 4rem 1rem 4rem 1rem;
   background-image: url('../assets/background/pink-circles.svg');
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
-
+  width: 100%;
   @include device(tablet-port) {
     flex-direction: row;
-  }
-
-  @include device(desktop) {
-    gap: 15rem;
+    padding: 0 3rem 0 3rem;
   }
 }
 
-.category {
+.product-category {
   @extend .polaroid;
-  @include device(sm-phone) {
-    width: 150px;
-    height: 180px;
+
+  margin: 2rem;
+
+  @include device(desktop) {
+    transform: scale(1.5);
   }
 
-  @include device(tablet-land) {
-    width: 300px;
-    height: 360px;
-  }
-
-  &:first-of-type {
-    transform: rotateZ(-5deg) translate(-20px, 0px);
-
-    @include device(tablet-port) {
-      transform: rotateZ(-25deg) translate(-20px, 10px);
-    }
-    @include device(tablet-land) {
-      transform: rotateZ(-15deg) translate(-20px, 10px);
-    }
-
-    @include device(desktop) {
-      transform: rotateZ(-15deg) translate(-20px, 10px);
-    }
-  }
-
-  &:last-of-type {
-    transform: rotateZ(8deg) translate(35px, -40px);
-    @include device(tablet-port) {
-      transform: rotateZ(15deg) translate(-10px, -50px);
-    }
-  }
-
-  &__image {
-    width: 90%;
+  .product-category-image-container {
+    width: 140px;
+    height: 140px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .product-category__image {
+    &-socks {
+      @extend .product-category-image-container;
+      background-image: url('../assets/images/socks-pink.jpg');
+    }
+    &-stockings {
+      @extend .product-category-image-container;
+      background-image: url('../assets/images/stockings-blue.jpg');
+    }
+    &-adults {
+      @extend .product-category-image-container;
+      background-image: url('../assets/images/adults.jpg');
+    }
   }
 
   &__name {
     font-size: 4rem;
-    letter-spacing: 0.7rem;
     color: var(--primary-grey);
     font-family: var(--font-secondary);
   }
@@ -68,5 +58,15 @@
   &:hover,
   &:active {
     transform: scale(1.1);
+    @include device(desktop) {
+      transform: scale(1.7);
+    }
+  }
+}
+
+#products-adults {
+  span {
+    letter-spacing: -2px;
+    text-align: center;
   }
 }

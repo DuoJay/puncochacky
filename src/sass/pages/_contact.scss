@@ -27,8 +27,7 @@
 
     border-radius: 15px;
     background: #ffffff;
-    box-shadow: 11px 11px 22px #e6e6e6, -11px -11px 22px #ffffff;
-
+    box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.04);
     &-span {
       font-weight: 700;
       font-size: 2.3rem;
@@ -37,12 +36,19 @@
 
     &-icon {
       fill: var(--primary-green);
-      width: 32px;
+      width: 2.5rem;
+      height: 2.5rem;
       margin-right: auto;
     }
 
     &a {
       cursor: pointer;
+    }
+
+    &:first-of-type {
+      & span {
+        font-weight: 400;
+      }
     }
   }
 }

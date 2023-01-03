@@ -76,17 +76,15 @@ a {
   font-weight: 700;
 }
 
-.polaroid, .category, .info__image {
+.polaroid, .product-category, .info__image {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: var(--primary-light);
-  text-decoration: none;
   padding: 2rem 1rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 200px;
 }
 
 .header {
@@ -121,7 +119,6 @@ a {
   left: 0;
   width: 100%;
   height: var(--navbar-height);
-  padding: 1.5rem 0;
   color: var(--primary-pink);
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   z-index: 1000;
@@ -137,7 +134,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   cursor: pointer;
   font-size: 2rem;
   list-style: none;
@@ -145,12 +141,13 @@ a {
   width: 9rem;
   height: 9rem;
   border-radius: 25px;
+  gap: 0.5rem;
   transition: color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 .navbar__item-icon {
   fill: currentColor;
-  height: 3rem;
+  height: 2.5rem;
 }
 .navbar__item.on-this-page {
   color: var(--primary-light);
@@ -181,7 +178,7 @@ a {
 .background-one,
 .background-two {
   background-image: url("../assets/logo/snura-transparent.png");
-  height: var(--content-height);
+  height: 30vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -192,6 +189,12 @@ a {
     background-size: contain;
     background-attachment: fixed;
     background-position: center;
+  }
+}
+@media only screen and (min-width: 37.5em) {
+  .background-one,
+  .background-two {
+    height: var(--content-height);
   }
 }
 
@@ -307,80 +310,67 @@ a {
   text-decoration: underline;
 }
 
-.categories-container {
-  margin-top: var(--header-height);
-  height: var(--content-height);
+.products-category-container {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+  padding: 4rem 1rem 4rem 1rem;
   background-image: url("../assets/background/pink-circles.svg");
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  width: 100%;
 }
 @media only screen and (min-width: 37.5em) {
-  .categories-container {
+  .products-category-container {
     flex-direction: row;
-  }
-}
-@media only screen and (min-width: 64em) {
-  .categories-container {
-    gap: 15rem;
+    padding: 0 3rem 0 3rem;
   }
 }
 
-.category {
+.product-category {
+  margin: 2rem;
   transition: all 0.3s ease-in;
 }
-@media only screen and (max-width: 25em) {
-  .category {
-    width: 150px;
-    height: 180px;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .category {
-    width: 300px;
-    height: 360px;
-  }
-}
-.category:first-of-type {
-  transform: rotateZ(-5deg) translate(-20px, 0px);
-}
-@media only screen and (min-width: 37.5em) {
-  .category:first-of-type {
-    transform: rotateZ(-25deg) translate(-20px, 10px);
-  }
-}
-@media only screen and (min-width: 48em) {
-  .category:first-of-type {
-    transform: rotateZ(-15deg) translate(-20px, 10px);
-  }
-}
 @media only screen and (min-width: 64em) {
-  .category:first-of-type {
-    transform: rotateZ(-15deg) translate(-20px, 10px);
+  .product-category {
+    transform: scale(1.5);
   }
 }
-.category:last-of-type {
-  transform: rotateZ(8deg) translate(35px, -40px);
-}
-@media only screen and (min-width: 37.5em) {
-  .category:last-of-type {
-    transform: rotateZ(15deg) translate(-10px, -50px);
-  }
-}
-.category__image {
-  width: 90%;
+.product-category .product-category-image-container, .product-category .product-category__image-adults, .product-category .product-category__image-stockings, .product-category .product-category__image-socks {
+  width: 140px;
+  height: 140px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.category__name {
+.product-category .product-category__image-socks {
+  background-image: url("../assets/images/socks-pink.jpg");
+}
+.product-category .product-category__image-stockings {
+  background-image: url("../assets/images/stockings-blue.jpg");
+}
+.product-category .product-category__image-adults {
+  background-image: url("../assets/images/adults.jpg");
+}
+.product-category__name {
   font-size: 4rem;
-  letter-spacing: 0.7rem;
   color: var(--primary-grey);
   font-family: var(--font-secondary);
 }
-.category:hover, .category:active {
+.product-category:hover, .product-category:active {
   transform: scale(1.1);
+}
+@media only screen and (min-width: 64em) {
+  .product-category:hover, .product-category:active {
+    transform: scale(1.7);
+  }
+}
+
+#products-adults span {
+  letter-spacing: -2px;
+  text-align: center;
 }
 
 .contact__container {
@@ -407,7 +397,7 @@ a {
   width: 80vw;
   border-radius: 15px;
   background: #ffffff;
-  box-shadow: 11px 11px 22px #e6e6e6, -11px -11px 22px #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
 }
 .contact__item-span {
   font-weight: 700;
@@ -416,11 +406,15 @@ a {
 }
 .contact__item-icon {
   fill: var(--primary-green);
-  width: 32px;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: auto;
 }
 .contact__itema {
   cursor: pointer;
+}
+.contact__item:first-of-type span {
+  font-weight: 400;
 }
 
 .category__container {

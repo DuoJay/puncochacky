@@ -12,7 +12,8 @@
 .background-one,
 .background-two {
   background-image: url('../assets/logo/snura-transparent.png');
-  height: var(--content-height);
+
+  height: 30vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -20,6 +21,10 @@
     background-size: contain;
     background-attachment: fixed;
     background-position: center;
+  }
+
+  @include device(tablet-port) {
+    height: var(--content-height);
   }
 }
 
