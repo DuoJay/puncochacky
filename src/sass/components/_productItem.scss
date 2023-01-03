@@ -1,7 +1,10 @@
 .product {
+  width: 20rem;
   &__name {
+    @extend .highlight-purple;
   }
   &__size {
+    font-size: 1.5rem;
   }
   &__images {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);

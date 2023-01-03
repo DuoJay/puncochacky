@@ -12,6 +12,7 @@
 
   &__items {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5rem;
