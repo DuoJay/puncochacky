@@ -1,0 +1,9 @@
+.product-detail {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: var(--content-height);
+  }
+}

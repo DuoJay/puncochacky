@@ -1,6 +1,7 @@
 .contact {
   &__container {
-    background-image: url('../assets/background/green-circles.svg');
+    background-image: url('../assets/background/green-circles.svg'),
+      linear-gradient(#fff, #fff);
     height: 100vh;
     width: 100%;
 

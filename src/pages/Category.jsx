@@ -1,5 +1,5 @@
-import { Children, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import {
   collection,
   getDocs,
@@ -7,7 +7,6 @@ import {
   where,
   orderBy,
   limit,
-  startAfter,
 } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import ProductItem from '../components/ProductItem';
@@ -60,10 +59,12 @@ function Category() {
         <main className="category__container">
           <ul className="category__items">
             {products.map(product => (
-              <ProductItem
+              <Link
                 key={product.id}
-                product={product.data}
-              ></ProductItem>
+                to={`/products/${params.categoryName}/${product.id}`}
+              >
+                <ProductItem product={product.data}></ProductItem>
+              </Link>
             ))}
           </ul>
         </main>

@@ -38,6 +38,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font-primary);
   color: var(--primary-grey);
+  background-image: url("../assets/background/pink-circles.svg");
 }
 
 a {
@@ -188,7 +189,7 @@ a {
 /* PARALLAX BACKGROUNDS*/
 .background-one,
 .background-two {
-  background-image: url("../assets/logo/snura-transparent.png");
+  background-image: url("../assets/logo/snura-transparent.png"), linear-gradient(#fff, #fff);
   height: 30vh;
   background-repeat: no-repeat;
   background-size: contain;
@@ -210,12 +211,12 @@ a {
 }
 
 .background-two {
-  background-image: url("../assets/logo/snura3.jpg");
+  background-image: url("../assets/logo/snura3.jpg"), linear-gradient(#fff, #fff);
 }
 
 /* HERO SECTIONS */
 .hero {
-  background-image: url("../assets/background/pink-circles.svg");
+  background-image: url("../assets/background/pink-circles.svg"), linear-gradient(#fff, #fff);
   margin-top: var(--header-height);
 }
 .hero__title {
@@ -238,7 +239,7 @@ a {
 
 /* INFO SECTION*/
 .info {
-  background-image: url("../assets/background/green-circles.svg");
+  background-image: url("../assets/background/green-circles.svg"), linear-gradient(#fff, #fff);
   height: calc(100vh - var(--navbar-height));
 }
 .info__text {
@@ -281,7 +282,7 @@ a {
 
 /* CTA SECTION*/
 .cta {
-  background-image: url("../assets/background/pink-circles.svg");
+  background-image: url("../assets/background/pink-circles.svg"), linear-gradient(#fff, #fff);
   height: calc(100vh - var(--navbar-height));
   margin-bottom: var(--navbar-height);
   gap: 3rem;
@@ -321,12 +322,55 @@ a {
   text-decoration: underline;
 }
 
+.contact__container {
+  background-image: url("../assets/background/green-circles.svg"), linear-gradient(#fff, #fff);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.contact__heading {
+  text-align: center;
+}
+.contact__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-light);
+  width: 80vw;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+}
+.contact__item-span {
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: var(--primary-green);
+}
+.contact__item-icon {
+  fill: var(--primary-green);
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: auto;
+}
+.contact__itema {
+  cursor: pointer;
+}
+.contact__item:first-of-type span {
+  font-weight: 400;
+}
+
 .products-category-container {
   min-height: var(--content-height);
   margin-top: calc(var(--header-height));
   margin-bottom: var(--navbar-height);
   padding: 4rem 1rem 4rem 1rem;
-  background-image: url("../assets/background/pink-circles.svg");
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -384,52 +428,7 @@ a {
   text-align: center;
 }
 
-.contact__container {
-  background-image: url("../assets/background/green-circles.svg");
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-.contact__heading {
-  text-align: center;
-}
-.contact__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 2rem;
-  padding: 2rem;
-  background-color: var(--primary-light);
-  width: 80vw;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
-}
-.contact__item-span {
-  font-weight: 700;
-  font-size: 2.3rem;
-  color: var(--primary-green);
-}
-.contact__item-icon {
-  fill: var(--primary-green);
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: auto;
-}
-.contact__itema {
-  cursor: pointer;
-}
-.contact__item:first-of-type span {
-  font-weight: 400;
-}
-
 .category__container {
-  background-image: url("../assets/background/pink-circles.svg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -444,6 +443,14 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
+}
+
+.product-detail__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: var(--content-height);
 }
 
 .db {

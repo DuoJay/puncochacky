@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import socksPink from '../assets/images/socks-pink.jpg';
-import stockingsBlue from '../assets/images/stockings-blue.jpg';
-import adults from '../assets/images/adults.jpg';
 
 function Products() {
   return (

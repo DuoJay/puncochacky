@@ -6,6 +6,7 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Category from './pages/Category';
 import Db from './pages/Db';
+import ProductDetail from './pages/ProductDetail';
 
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -19,6 +20,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:categoryName" element={<Category />} />
+          <Route
+            path="/products/:categoryName/:productId"
+            element={<ProductDetail />}
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/db" element={<Db />} />
         </Routes>

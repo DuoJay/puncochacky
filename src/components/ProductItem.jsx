@@ -30,12 +30,6 @@ function ProductItem({ product }) {
 
   return (
     <li className="product polaroid">
-      {/* <img
-        className="product__images"
-        src={product.imgUrls[0]}
-        alt="obrázek ponožek"
-        width={'200px'}
-      /> */}
       <Slider images={product.imgUrls}></Slider>
       <h3 className="product__name h3">{product.name}</h3>
       <span className="product__size">Velikost: {translateSize(product)}</span>
