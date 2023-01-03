@@ -173,7 +173,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: var(--content-height);
   gap: 3rem;
 }
 
@@ -181,7 +181,7 @@ a {
 .background-one,
 .background-two {
   background-image: url("../assets/logo/snura-transparent.png");
-  min-height: 35rem;
+  height: var(--content-height);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -197,14 +197,12 @@ a {
 
 .background-two {
   background-image: url("../assets/logo/snura3.jpg");
-  min-height: 35rem;
 }
 
 /* HERO SECTIONS */
 .hero {
-  padding-top: 16rem;
-  min-height: 90vh;
   background-image: url("../assets/background/pink-circles.svg");
+  margin-top: var(--header-height);
 }
 .hero__title {
   font-size: 4rem;
@@ -227,7 +225,7 @@ a {
 /* INFO SECTION*/
 .info {
   background-image: url("../assets/background/green-circles.svg");
-  min-height: 90vh;
+  height: calc(100vh - var(--navbar-height));
 }
 .info__text {
   display: flex;
@@ -270,7 +268,8 @@ a {
 /* CTA SECTION*/
 .cta {
   background-image: url("../assets/background/pink-circles.svg");
-  min-height: 90vh;
+  height: calc(100vh - var(--navbar-height));
+  margin-bottom: var(--navbar-height);
   gap: 3rem;
 }
 .cta__heading {

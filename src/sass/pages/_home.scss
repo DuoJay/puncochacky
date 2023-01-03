@@ -5,15 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  height: 50vh;
+  height: var(--content-height);
   gap: 3rem;
 }
 /* PARALLAX BACKGROUNDS*/
 .background-one,
 .background-two {
   background-image: url('../assets/logo/snura-transparent.png');
-  min-height: 35rem;
+  height: var(--content-height);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -26,15 +25,12 @@
 
 .background-two {
   background-image: url('../assets/logo/snura3.jpg');
-  min-height: 35rem;
 }
 
 /* HERO SECTIONS */
 .hero {
-  padding-top: 16rem;
-  min-height: 90vh;
   background-image: url('../assets/background/pink-circles.svg');
-
+  margin-top: var(--header-height);
   &__title {
     font-size: 4rem;
     text-align: center;
@@ -60,8 +56,7 @@
 /* INFO SECTION*/
 .info {
   background-image: url('../assets/background/green-circles.svg');
-  min-height: 90vh;
-
+  height: calc(100vh - var(--navbar-height));
   &__text {
     display: flex;
     flex-direction: column;
@@ -119,7 +114,8 @@
 /* CTA SECTION*/
 .cta {
   background-image: url('../assets/background/pink-circles.svg');
-  min-height: 90vh;
+  height: calc(100vh - var(--navbar-height));
+  margin-bottom: var(--navbar-height);
   gap: 3rem;
 
   &__heading {
