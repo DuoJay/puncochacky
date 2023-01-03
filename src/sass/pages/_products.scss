@@ -1,6 +1,6 @@
 .categories-container {
-  padding-top: 10rem;
-  height: 100vh;
+  margin-top: var(--header-height);
+  height: var(--content-height);
   background-image: url('../assets/background/pink-circles.svg');
   display: flex;
   flex-direction: column;

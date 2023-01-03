@@ -16,4 +16,8 @@
   --primary-purple: #85509b;
   --primary-yellow: #f2c722;
   --primary-green: #2fac62;
+
+  --header-height: 10rem;
+  --navbar-height: 10rem;
+  --content-height: calc(100vh - var(--header-height) - var(--navbar-height));
 }
