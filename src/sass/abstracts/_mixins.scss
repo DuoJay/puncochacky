@@ -37,3 +37,10 @@
   margin-top: calc(var(--header-height));
   margin-bottom: var(--navbar-height);
 }
+
+// FLEXBOX
+@mixin flex-center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
