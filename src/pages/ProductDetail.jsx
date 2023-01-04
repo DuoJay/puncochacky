@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase.config';
+import materialGroups from '../assets/data/materialGroups';
 
 import Slider from '../components/Slider';
 
 function ProductDetail() {
   const [product, setProduct] = useState(null);
-
-  product !== null && console.log(product.group);
 
   const params = useParams();
 
@@ -33,6 +32,12 @@ function ProductDetail() {
           <div className="productDetail__images">
             <Slider images={product.imgUrls}></Slider>
           </div>
+          <h4 className="productDetail__description">
+            {materialGroups[product.group].description}
+          </h4>
+          <p className="productDetail__materials">
+            {materialGroups[product.group].materials}
+          </p>
         </div>
       </main>
     )
