@@ -18,6 +18,7 @@ function Db() {
     color: '',
     size: 1,
     type: 'socks',
+    group: 1,
     images: {},
   });
 
@@ -90,10 +91,10 @@ function Db() {
 
   const onMutate = e => {
     // Size to number
-    if (e.target.id === 'size') {
+    if (e.target.id === 'size' || e.target.id === 'group') {
       setFormData(prevState => ({
         ...prevState,
-        size: +e.target.value,
+        [e.target.id]: +e.target.value,
       }));
     }
     // Files
@@ -104,7 +105,7 @@ function Db() {
       }));
     }
     // Text
-    if (!e.target.files && e.target.id !== 'size') {
+    if (!e.target.files && e.target.id !== 'size' && e.target.id !== 'group') {
       setFormData(prevState => ({
         ...prevState,
         [e.target.id]: e.target.value,
@@ -169,6 +170,31 @@ function Db() {
           <option value="socks">Ponožky</option>
           <option value="stockings">Punčošky</option>
           <option value="adult">Pro dospělé</option>
+        </select>
+
+        <label htmlFor="group" className="db__form-input">
+          Skupina:
+        </label>
+        <select
+          id="group"
+          className="db__form-input"
+          onChange={onMutate}
+          required
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
         </select>
 
         <label htmlFor="images" className="db__form-input">

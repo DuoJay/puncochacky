@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  @include content-container-adjust;
+  padding-bottom: 5rem;
 
   &__form {
     display: flex;

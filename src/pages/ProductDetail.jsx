@@ -27,12 +27,9 @@ function ProductDetail() {
     product !== null && (
       <main className="productDetail">
         <div className="productDetail__container">
-          <h2 className="h2">{product.name}</h2>
+          <h2 className="productDetail__heading h2">{product.name}</h2>
           <div className="productDetail__images">
-            <Slider
-              style={{ height: '30rem', width: '30rem' }}
-              images={product.imgUrls}
-            ></Slider>
+            <Slider images={product.imgUrls}></Slider>
           </div>
         </div>
       </main>
