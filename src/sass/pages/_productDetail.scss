@@ -1,4 +1,4 @@
-.product-detail {
+.productDetail {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,10 @@
     border: 1px solid rgba($color: #000000, $alpha: 0.25);
     border-radius: 25px;
   }
-
+  &__images {
+    width: 20rem;
+    height: 20rem;
+  }
   .swiper-pagination-bullet {
     background: var(--primary-pink) !important;
     transform: translateY(-10px);

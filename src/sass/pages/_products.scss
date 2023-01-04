@@ -1,69 +1,19 @@
-.products-category-container {
-  @include content-container-adjust;
-  padding: 4rem 1rem 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  @include device(tablet-port) {
+.products {
+  &__container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+  }
+
+  &__items {
+    display: flex;
     flex-direction: row;
-    padding: 0 3rem 0 3rem;
-  }
-}
-
-.product-category {
-  @extend .polaroid;
-
-  margin: 2rem;
-
-  @include device(desktop) {
-    transform: scale(1.5);
-  }
-
-  .product-category-image-container {
-    width: 140px;
-    height: 140px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .product-category__image {
-    &-socks {
-      @extend .product-category-image-container;
-      background-image: url('../assets/images/socks-pink.jpg');
-    }
-    &-stockings {
-      @extend .product-category-image-container;
-      background-image: url('../assets/images/stockings-blue.jpg');
-    }
-    &-adults {
-      @extend .product-category-image-container;
-      background-image: url('../assets/images/adults.jpg');
-    }
-  }
-
-  &__name {
-    font-size: 4rem;
-    color: var(--primary-grey);
-    font-family: var(--font-secondary);
-  }
-
-  transition: all 0.3s ease-in;
-
-  &:hover,
-  &:active {
-    transform: scale(1.1);
-    @include device(desktop) {
-      transform: scale(1.7);
-    }
-  }
-}
-
-#products-adults {
-  span {
-    letter-spacing: -2px;
-    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
   }
 }

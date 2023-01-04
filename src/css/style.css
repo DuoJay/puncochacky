@@ -62,7 +62,7 @@ a {
   font-weight: 700;
 }
 
-.highlight-purple, .cta__paragraph span:nth-of-type(1), .info__text-paragraph span:nth-of-type(2), .product__name {
+.highlight-purple, .cta__paragraph span:nth-of-type(1), .info__text-paragraph span:nth-of-type(2), .productItem__name {
   color: var(--primary-purple);
   font-weight: 700;
 }
@@ -77,7 +77,7 @@ a {
   font-weight: 700;
 }
 
-.polaroid, .product-category, .info__image {
+.polaroid, .category, .info__image {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,16 +157,16 @@ a {
   font-weight: 400;
 }
 
-.product {
+.productItem {
   width: 20rem;
 }
-.product__size {
+.productItem__size {
   font-size: 1.5rem;
 }
-.product__images {
+.productItem__images {
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 90%;
-  height: 90%;
+  width: 18rem;
+  height: 18rem;
   margin: 1rem;
 }
 
@@ -371,7 +371,24 @@ a {
   }
 }
 
-.products-category-container {
+.products__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+.products__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.category-container {
   min-height: var(--content-height);
   margin-top: calc(var(--header-height));
   margin-bottom: var(--navbar-height);
@@ -383,74 +400,57 @@ a {
   width: 100%;
 }
 @media only screen and (min-width: 37.5em) {
-  .products-category-container {
+  .category-container {
     flex-direction: row;
     padding: 0 3rem 0 3rem;
   }
 }
 
-.product-category {
+.category {
   margin: 2rem;
   transition: all 0.3s ease-in;
 }
 @media only screen and (min-width: 64em) {
-  .product-category {
+  .category {
     transform: scale(1.5);
   }
 }
-.product-category .product-category-image-container, .product-category .product-category__image-adults, .product-category .product-category__image-stockings, .product-category .product-category__image-socks {
+.category .category-image-container, .category .category__image-adults, .category .category__image-stockings, .category .category__image-socks {
   width: 140px;
   height: 140px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.product-category .product-category__image-socks {
+.category .category__image-socks {
   background-image: url("../assets/images/socks-pink.jpg");
 }
-.product-category .product-category__image-stockings {
+.category .category__image-stockings {
   background-image: url("../assets/images/stockings-blue.jpg");
 }
-.product-category .product-category__image-adults {
+.category .category__image-adults {
   background-image: url("../assets/images/adults.jpg");
 }
-.product-category__name {
+.category__name {
   font-size: 4rem;
   color: var(--primary-grey);
   font-family: var(--font-secondary);
 }
-.product-category:hover, .product-category:active {
+.category:hover, .category:active {
   transform: scale(1.1);
 }
 @media only screen and (min-width: 64em) {
-  .product-category:hover, .product-category:active {
+  .category:hover, .category:active {
     transform: scale(1.7);
   }
 }
 
-#products-adults span {
+#category-adults span {
   letter-spacing: -2px;
   text-align: center;
 }
 
-.category__container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 14rem;
-  padding-bottom: 14rem;
-}
-.category__items {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5rem;
-}
-
-.product-detail {
+.productDetail {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -459,13 +459,17 @@ a {
   margin-bottom: var(--navbar-height);
   align-items: center;
 }
-.product-detail__container {
+.productDetail__container {
   background-color: var(--primary-light);
   padding: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 25px;
 }
-.product-detail .swiper-pagination-bullet {
+.productDetail__images {
+  width: 20rem;
+  height: 20rem;
+}
+.productDetail .swiper-pagination-bullet {
   background: var(--primary-pink) !important;
   transform: translateY(-10px);
 }

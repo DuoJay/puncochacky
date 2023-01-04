@@ -1,4 +1,4 @@
-.product {
+.productItem {
   width: 20rem;
   &__name {
     @extend .highlight-purple;
@@ -8,8 +8,8 @@
   }
   &__images {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
-    width: 90%;
-    height: 90%;
+    width: 18rem;
+    height: 18rem;
     margin: 1rem;
   }
 }

@@ -13,22 +13,23 @@ import 'swiper/css';
 
 import React from 'react';
 
-function Slider({ images, style }) {
+function Slider({ images }) {
   return (
     <>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        style={style}
+        style={{ height: '100%', width: '100%' }}
       >
         {images.map(image => (
           <SwiperSlide key={uuidv4()}>
             <div
-              className="product__images"
               style={{
                 background: `url(${image}) center no-repeat`,
                 backgroundSize: 'cover',
+                width: '100%',
+                height: '100%',
               }}
             ></div>
           </SwiperSlide>

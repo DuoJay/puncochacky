@@ -29,13 +29,14 @@ function ProductItem({ product }) {
   };
 
   return (
-    <li className="product polaroid">
-      <Slider
-        style={{ height: '18rem', width: '18rem' }}
-        images={product.imgUrls}
-      ></Slider>
-      <h3 className="product__name h3">{product.name}</h3>
-      <span className="product__size">Velikost: {translateSize(product)}</span>
+    <li className="productItem polaroid">
+      <div className="productItem__images">
+        <Slider images={product.imgUrls}></Slider>
+      </div>
+      <h3 className="productItem__name h3">{product.name}</h3>
+      <span className="productItem__size">
+        Velikost: {translateSize(product)}
+      </span>
     </li>
   );
 }

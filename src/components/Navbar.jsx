@@ -29,10 +29,10 @@ function Navbar() {
         </li>
         <li
           className={`navbar__item ${
-            pathMatchRoute('/products') && 'on-this-page'
+            pathMatchRoute('/category') && 'on-this-page'
           }`}
           onClick={() => {
-            navigate('/products');
+            navigate('/category');
           }}
         >
           <SocksIcon className="navbar__item-icon"></SocksIcon>

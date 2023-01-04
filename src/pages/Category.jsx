@@ -1,76 +1,22 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import {
-  collection,
-  getDocs,
-  query,
-  where,
-  orderBy,
-  limit,
-} from 'firebase/firestore';
-import { db } from '../firebase.config';
-import ProductItem from '../components/ProductItem';
+import { Link } from 'react-router-dom';
 
-function Category() {
-  const [products, setProducts] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  const params = useParams();
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        // Get referencte
-        const productsRef = collection(db, 'products');
-
-        //Create a query
-        const q = query(
-          productsRef,
-          where('type', '==', params.categoryName),
-          orderBy('size', 'desc'),
-          limit(10)
-        );
-
-        // Execute query
-        const querySnap = await getDocs(q);
-
-        let fetchedProducts = [];
-
-        querySnap.forEach(doc => {
-          return fetchedProducts.push({
-            id: doc.id,
-            data: doc.data(),
-          });
-        });
-
-        setProducts(fetchedProducts);
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchProducts();
-  }, [params.categoryName]);
-
+function Products() {
   return (
-    products !== null && (
-      <>
-        <main className="category__container">
-          <ul className="category__items">
-            {products.map(product => (
-              <Link
-                key={product.id}
-                to={`/products/${params.categoryName}/${product.id}`}
-              >
-                <ProductItem product={product.data}></ProductItem>
-              </Link>
-            ))}
-          </ul>
-        </main>
-      </>
-    )
+    <div className="category-container">
+      <Link className="category" to={'/category/socks'}>
+        <div className="category__image-socks"></div>
+        <span className="category__name">ponožky</span>
+      </Link>
+      <Link className="category" to={'/category/stockings'}>
+        <div className="category__image-stockings"></div>
+        <span className="category__name">punčošky</span>
+      </Link>
+      <Link className="category" to={'/category/adults'} id="category-adults">
+        <div className="category__image-adults"></div>
+        <span className="category__name">pro dospělé</span>
+      </Link>
+    </div>
   );
 }
 
-export default Category;
+export default Products;
