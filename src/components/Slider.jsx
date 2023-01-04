@@ -13,14 +13,14 @@ import 'swiper/css';
 
 import React from 'react';
 
-function Slider({ images }) {
+function Slider({ images, style }) {
   return (
     <>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        style={{ height: '18rem', width: '18rem' }}
+        style={style}
       >
         {images.map(image => (
           <SwiperSlide key={uuidv4()}>

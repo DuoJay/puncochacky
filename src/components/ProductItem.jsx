@@ -30,7 +30,10 @@ function ProductItem({ product }) {
 
   return (
     <li className="product polaroid">
-      <Slider images={product.imgUrls}></Slider>
+      <Slider
+        style={{ height: '18rem', width: '18rem' }}
+        images={product.imgUrls}
+      ></Slider>
       <h3 className="product__name h3">{product.name}</h3>
       <span className="product__size">Velikost: {translateSize(product)}</span>
     </li>

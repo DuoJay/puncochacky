@@ -30,3 +30,10 @@
     }
   }
 }
+
+// Main content margins top and bottom adjust
+@mixin content-container-adjust {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+}

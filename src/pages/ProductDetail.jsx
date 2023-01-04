@@ -23,14 +23,19 @@ function ProductDetail() {
     fetchProduct();
   }, [params.productId]);
 
-  if (product) {
-    return (
-      <main className="product-detail__container">
-        <h2 className="h2">{product.name}</h2>
-        <Slider images={product.imgUrls}></Slider>
+  return (
+    product !== null && (
+      <main className="product-detail">
+        <div className="product-detail__container">
+          <h2 className="h2">{product.name}</h2>
+          <Slider
+            style={{ height: '30rem', width: '30rem' }}
+            images={product.imgUrls}
+          ></Slider>
+        </div>
       </main>
-    );
-  }
+    )
+  );
 }
 
 export default ProductDetail;

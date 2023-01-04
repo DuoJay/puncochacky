@@ -1,9 +1,6 @@
 .products-category-container {
-  min-height: var(--content-height);
-  margin-top: calc(var(--header-height));
-  margin-bottom: var(--navbar-height);
+  @include content-container-adjust;
   padding: 4rem 1rem 4rem 1rem;
-  // background-image: url('../assets/background/pink-circles.svg');
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

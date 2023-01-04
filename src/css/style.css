@@ -323,9 +323,9 @@ a {
 }
 
 .contact__container {
-  background-image: url("../assets/background/green-circles.svg"), linear-gradient(#fff, #fff);
-  height: 100vh;
-  width: 100%;
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,6 +364,11 @@ a {
 }
 .contact__item:first-of-type span {
   font-weight: 400;
+}
+@media only screen and (min-width: 64em) {
+  .contact__item {
+    width: 50vw;
+  }
 }
 
 .products-category-container {
@@ -445,12 +450,24 @@ a {
   gap: 5rem;
 }
 
-.product-detail__container {
+.product-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
   align-items: center;
-  height: var(--content-height);
+}
+.product-detail__container {
+  background-color: var(--primary-light);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+.product-detail .swiper-pagination-bullet {
+  background: var(--primary-pink) !important;
+  transform: translateY(-10px);
 }
 
 .db {
