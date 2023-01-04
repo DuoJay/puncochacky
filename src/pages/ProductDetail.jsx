@@ -8,6 +8,8 @@ import Slider from '../components/Slider';
 function ProductDetail() {
   const [product, setProduct] = useState(null);
 
+  product !== null && console.log(product.group);
+
   const params = useParams();
 
   useEffect(() => {

@@ -37,6 +37,7 @@ function ProductItem({ product }) {
       <span className="productItem__size">
         Velikost: {translateSize(product)}
       </span>
+      <span className="productItem__size">Barva: {product.color}</span>
     </li>
   );
 }
