@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import materialGroups from '../assets/data/materialGroups';
+import { ReactComponent as BackHand } from '../assets/svg/backhand.svg';
 
 import Slider from '../components/Slider';
 
@@ -39,6 +40,9 @@ function ProductDetail() {
             {materialGroups[product.group].materials}
           </p>
         </div>
+        <spap className="return-back-icon">
+          <BackHand></BackHand> Zpět
+        </spap>
       </main>
     )
   );

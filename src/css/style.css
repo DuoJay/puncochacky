@@ -465,7 +465,8 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-light);
-  padding: 2rem;
+  padding: 3rem 2rem 3rem 2rem;
+  gap: 2rem;
   width: 85vw;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -474,9 +475,28 @@ a {
   width: 100%;
   aspect-ratio: 1/1;
 }
-.productDetail .swiper-pagination-bullet {
-  background: var(--primary-pink) !important;
-  transform: translateY(-10px);
+.productDetail__description {
+  font-size: 2rem;
+  position: relative;
+  padding-top: 2rem;
+}
+.productDetail__description::before {
+  content: "";
+  background-color: var(--secondary-light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  z-index: 100;
+  border-radius: 50px;
+}
+.productDetail__materials {
+  font-size: 1.9rem;
+}
+
+.return-back-icon {
+  fill: var(--primary-pink);
 }
 
 .db {

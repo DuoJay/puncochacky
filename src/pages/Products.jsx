@@ -28,7 +28,7 @@ function Category() {
           productsRef,
           where('type', '==', params.categoryName),
           orderBy('size', 'desc'),
-          limit(10)
+          limit(50)
         );
 
         // Execute query
