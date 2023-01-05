@@ -18,8 +18,14 @@
 .env.test.local
 .env.production.local
 
+# secrets
+firebase.config.js
+
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
 
 cutedcode.jsx
