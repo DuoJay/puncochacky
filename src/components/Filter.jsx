@@ -32,10 +32,8 @@ function Filter({ products, setFilteredProducts }) {
   const [selectedSize, setSelectedSize] = useState('');
 
   useEffect(() => {
-    const allProductSizes = [];
-    products.forEach(product => {
-      allProductSizes.push(product.data.size);
-    });
+    const allProductSizes = products.map(product => product.data.size);
+
     const removeDuplcates = numbers => {
       return [...new Set(numbers)];
     };
