@@ -3,15 +3,22 @@
     display: flex;
     position: absolute;
     top: 11rem;
-    background-color: var(--primary-light);
     z-index: 999;
   }
 
   &__select {
     font-size: 2rem;
     width: 50vw;
+    padding: 1rem;
+    border-radius: 15px;
+    color: var(--primary-pink);
+
     @include device(tablet-port) {
       width: 400px;
+    }
+
+    &__option {
+      border: none;
     }
   }
 }

@@ -28,7 +28,7 @@ const translateSize = size => {
 };
 
 function Filter({ products, setFilteredProducts }) {
-  const [sizes, setSizes] = useState([1, 2]);
+  const [sizes, setSizes] = useState('');
   const [selectedSize, setSelectedSize] = useState('');
 
   useEffect(() => {
@@ -55,13 +55,18 @@ function Filter({ products, setFilteredProducts }) {
     sizes && (
       <>
         <div className="filter__container">
-          <select name="size" id="size" onChange={handleSizeChange}>
-            <option value="allSizes" key="allSizes">
+          <select
+            className="filter__select"
+            name="size"
+            id="size"
+            onChange={handleSizeChange}
+          >
+            <option className="filter__option" value="" key="allSizes">
               Všechny velikosti
             </option>
             {sizes.map(size => {
               return (
-                <option value={size} key={size}>
+                <option className="filter__option" value={size} key={size}>
                   {translateSize(size)}
                 </option>
               );

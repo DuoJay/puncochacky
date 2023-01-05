@@ -55,6 +55,18 @@ const materialGroups = {
     description: 'Punčocháčky s Aloe vera',
     materials: 'Bavlna 79%, Polyamid 19%, Elastan 2%',
   },
+  15: {
+    description: 'Kvalitní dámské ponožky s přírodního materiálu',
+    materials: 'Bambus 80%, Polyamid 20%',
+  },
+  16: {
+    description: 'Kvalitní dámské ponožky s nesvíravým lemem',
+    materials: 'Bavlna%, Polyamid 25%',
+  },
+  17: {
+    description: 'Kvalitní dámské ponožky s nesvíravým lemem',
+    materials: 'Bambus 75%, Polyamid 25%',
+  },
 };
 
 export default materialGroups;
