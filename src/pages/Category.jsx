@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Products() {
+function Category() {
   return (
     <div className="category-container">
       <Link className="category" to={'/category/socks'}>
@@ -19,4 +19,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Category;

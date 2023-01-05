@@ -10,8 +10,9 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import ProductItem from '../components/ProductItem';
+import Filter from '../components/Filter';
 
-function Category() {
+function Products() {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -53,10 +54,18 @@ function Category() {
     fetchProducts();
   }, [params.categoryName]);
 
+  const handleSizeChange = e => {
+    console.log(e.target.value);
+  };
+
   return (
     products !== null && (
       <>
         <main className="products__container">
+          <Filter
+            products={products}
+            handleSizeChange={handleSizeChange}
+          ></Filter>
           <ul className="products__items">
             {products.map(product => (
               <Link
@@ -73,4 +82,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default Products;

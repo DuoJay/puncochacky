@@ -1,8 +1,8 @@
 import Slider from './Slider';
 
 function ProductItem({ product }) {
-  const translateSize = product => {
-    switch (product.size) {
+  const translateSize = size => {
+    switch (size) {
       case 1:
         return '15-17';
       case 2:
@@ -35,7 +35,7 @@ function ProductItem({ product }) {
       </div>
       <h3 className="productItem__name h3">{product.name}</h3>
       <span className="productItem__size">
-        Velikost: {translateSize(product)}
+        Velikost: {translateSize(product.size)}
       </span>
       <span className="productItem__size">Barva: {product.color}</span>
     </li>
