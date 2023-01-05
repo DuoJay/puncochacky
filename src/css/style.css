@@ -175,6 +175,23 @@ a {
   transform: scale(1.2);
 }
 
+.filter__container {
+  display: flex;
+  position: fixed;
+  top: 11rem;
+  background-color: var(--primary-light);
+  z-index: 999;
+}
+.filter__select {
+  font-size: 2rem;
+  width: 50vw;
+}
+@media only screen and (min-width: 37.5em) {
+  .filter__select {
+    width: 400px;
+  }
+}
+
 .hero,
 .info,
 .cta {
@@ -377,7 +394,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 14rem;
+  padding-top: 16.5rem;
   padding-bottom: 14rem;
 }
 .products__items {

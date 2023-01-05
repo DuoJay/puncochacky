@@ -1,0 +1,17 @@
+.filter {
+  &__container {
+    display: flex;
+    position: fixed;
+    top: 11rem;
+    background-color: var(--primary-light);
+    z-index: 999;
+  }
+
+  &__select {
+    font-size: 2rem;
+    width: 50vw;
+    @include device(tablet-port) {
+      width: 400px;
+    }
+  }
+}

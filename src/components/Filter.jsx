@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Select from 'react-select';
 
 const translateSize = size => {
   switch (size) {
@@ -27,8 +28,36 @@ const translateSize = size => {
   }
 };
 
-function Filter({ products, handleSizeChange, setFilteredProducts }) {
-  const [sizes, setSizes] = useState(null);
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    color: state.isSelected ? '#ffffff' : '#e71b69',
+    backgroundColor: state.isSelected ? '#e71b69' : '#fff',
+    '&:hover': {
+      backgroundColor: '#e71b69',
+      color: '#fff',
+    },
+  }),
+  placeholder: provided => ({
+    ...provided,
+    fontSize: '2rem',
+  }),
+  control: provided => ({
+    ...provided,
+    borderColor: '#e71b69',
+    '&:hover': {
+      borderColor: '#e71b69',
+    },
+  }),
+  menu: provided => ({
+    ...provided,
+    overflow: 'hidden',
+  }),
+};
+
+function Filter({ products, setFilteredProducts }) {
+  const [sizes, setSizes] = useState([1, 2]);
+  const [selectedSize, setSelectedSize] = useState('');
 
   useEffect(() => {
     const allProductSizes = [];
@@ -41,36 +70,34 @@ function Filter({ products, handleSizeChange, setFilteredProducts }) {
     setSizes(removeDuplcates(allProductSizes));
   }, []);
 
-  ////////////////////////////////
-  ////////////////////////////////
-  ////////////////////////////////
-  ////////////////////////////////
-  ////////////////////////////////
-
-  const onSubmit = e => {
-    e.preventDefault();
+  const handleSizeChange = e => {
+    setSelectedSize(+e.value);
+    if (!e.value) {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(
+        products.filter(product => product.data.size === +e.value)
+      );
+    }
   };
+  const hardcodedOption = { value: '', label: 'Všechny velikosti' };
+  const dynamicOptions = sizes.map(size => ({
+    value: size,
+    label: translateSize(size),
+  }));
 
+  const options = [hardcodedOption, ...dynamicOptions];
   return (
     sizes && (
-      <>
-        <div className="filter__container">
-          <form className="filter__form" onSubmit={onSubmit}>
-            <select name="size" id="size" onChange={handleSizeChange}>
-              <option value="allSizes" key="allSizes">
-                Všechny velikosti
-              </option>
-              {sizes.map(size => {
-                return (
-                  <option value={size} key={size}>
-                    {translateSize(size)}
-                  </option>
-                );
-              })}
-            </select>
-          </form>
-        </div>
-      </>
+      <div className="filter__container">
+        <Select
+          options={options}
+          onChange={handleSizeChange}
+          styles={customStyles}
+          placeholder="Vybrat velikost"
+          className="filter__select"
+        ></Select>
+      </div>
     )
   );
 }

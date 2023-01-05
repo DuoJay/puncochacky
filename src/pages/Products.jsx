@@ -56,18 +56,6 @@ function Products() {
     fetchProducts();
   }, [params.categoryName]);
 
-  // const handleSizeChange = e => {
-  //   setSelectedSize(e.target.value);
-  //   if (selectedSize === 'allSizes') {
-  //     setFilteredProducts(products);
-  //     return;
-  //   }
-  //   const filteredProductsBySize = products.filter(
-  //     product => product.data.size === +selectedSize
-  //   );
-  //   setFilteredProducts(filteredProductsBySize);
-  // };
-
   return (
     products !== null && (
       <>
@@ -87,17 +75,6 @@ function Products() {
               </Link>
             ))}
           </ul>
-
-          <select
-            name="test"
-            id="test"
-            onChange={e => {
-              console.log(e.target.value);
-            }}
-          >
-            <option value="one">one</option>
-            <option value="two">two</option>
-          </select>
         </main>
       </>
     )
