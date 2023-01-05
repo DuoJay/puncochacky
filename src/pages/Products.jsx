@@ -14,6 +14,7 @@ import Filter from '../components/Filter';
 
 function Products() {
   const [products, setProducts] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const params = useParams();
@@ -45,6 +46,7 @@ function Products() {
         });
 
         setProducts(fetchedProducts);
+        setFilteredProducts(fetchedProducts);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -54,9 +56,17 @@ function Products() {
     fetchProducts();
   }, [params.categoryName]);
 
-  const handleSizeChange = e => {
-    console.log(e.target.value);
-  };
+  // const handleSizeChange = e => {
+  //   setSelectedSize(e.target.value);
+  //   if (selectedSize === 'allSizes') {
+  //     setFilteredProducts(products);
+  //     return;
+  //   }
+  //   const filteredProductsBySize = products.filter(
+  //     product => product.data.size === +selectedSize
+  //   );
+  //   setFilteredProducts(filteredProductsBySize);
+  // };
 
   return (
     products !== null && (
@@ -64,10 +74,11 @@ function Products() {
         <main className="products__container">
           <Filter
             products={products}
-            handleSizeChange={handleSizeChange}
+            setFilteredProducts={setFilteredProducts}
           ></Filter>
+
           <ul className="products__items">
-            {products.map(product => (
+            {filteredProducts.map(product => (
               <Link
                 key={product.id}
                 to={`/category/${params.categoryName}/${product.id}`}
@@ -76,6 +87,17 @@ function Products() {
               </Link>
             ))}
           </ul>
+
+          <select
+            name="test"
+            id="test"
+            onChange={e => {
+              console.log(e.target.value);
+            }}
+          >
+            <option value="one">one</option>
+            <option value="two">two</option>
+          </select>
         </main>
       </>
     )

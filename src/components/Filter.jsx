@@ -1,4 +1,3 @@
-import { collectionGroup } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 
 const translateSize = size => {
@@ -28,10 +27,8 @@ const translateSize = size => {
   }
 };
 
-function Filter({ products, handleSizeChange }) {
+function Filter({ products, handleSizeChange, setFilteredProducts }) {
   const [sizes, setSizes] = useState(null);
-
-  console.log(products);
 
   useEffect(() => {
     const allProductSizes = [];
@@ -44,6 +41,12 @@ function Filter({ products, handleSizeChange }) {
     setSizes(removeDuplcates(allProductSizes));
   }, []);
 
+  ////////////////////////////////
+  ////////////////////////////////
+  ////////////////////////////////
+  ////////////////////////////////
+  ////////////////////////////////
+
   const onSubmit = e => {
     e.preventDefault();
   };
@@ -54,6 +57,9 @@ function Filter({ products, handleSizeChange }) {
         <div className="filter__container">
           <form className="filter__form" onSubmit={onSubmit}>
             <select name="size" id="size" onChange={handleSizeChange}>
+              <option value="allSizes" key="allSizes">
+                Všechny velikosti
+              </option>
               {sizes.map(size => {
                 return (
                   <option value={size} key={size}>
