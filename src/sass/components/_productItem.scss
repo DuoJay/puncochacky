@@ -1,7 +1,14 @@
 .productItem {
   width: 20rem;
+  height: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
   &__name {
     @extend .highlight-purple;
+    letter-spacing: 0.3rem;
+    text-align: center;
   }
   &__size {
     font-size: 1.5rem;
@@ -10,6 +17,5 @@
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     width: 18rem;
     height: 18rem;
-    margin: 1rem;
   }
 }

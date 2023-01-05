@@ -11,6 +11,7 @@ import {
 import { db } from '../firebase.config';
 import ProductItem from '../components/ProductItem';
 import Filter from '../components/Filter';
+import SyncLoader from 'react-spinners/SyncLoader';
 
 function Products() {
   const [products, setProducts] = useState(null);
@@ -59,23 +60,35 @@ function Products() {
   return (
     products !== null && (
       <>
-        <main className="products__container">
-          <Filter
-            products={products}
-            setFilteredProducts={setFilteredProducts}
-          ></Filter>
-
-          <ul className="products__items">
-            {filteredProducts.map(product => (
-              <Link
-                key={product.id}
-                to={`/category/${params.categoryName}/${product.id}`}
-              >
-                <ProductItem product={product.data}></ProductItem>
-              </Link>
-            ))}
-          </ul>
-        </main>
+        {loading && (
+          <main className="products__container">
+            <SyncLoader
+              className="products__loader"
+              color="#e71b69"
+              margin={5}
+              size={30}
+              speedMultiplier={1}
+            />
+          </main>
+        )}
+        {!loading && (
+          <main className="products__container">
+            <Filter
+              products={products}
+              setFilteredProducts={setFilteredProducts}
+            ></Filter>
+            <ul className="products__items">
+              {filteredProducts.map(product => (
+                <Link
+                  key={product.id}
+                  to={`/category/${params.categoryName}/${product.id}`}
+                >
+                  <ProductItem product={product.data}></ProductItem>
+                </Link>
+              ))}
+            </ul>
+          </main>
+        )}
       </>
     )
   );
