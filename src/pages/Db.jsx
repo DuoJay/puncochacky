@@ -9,8 +9,8 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from 'firebase/storage';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { db } from '../firebase.config';
+// import { addDoc, collection } from 'firebase/firestore';
+// import { db } from '../firebase.config';
 
 function Db() {
   const [formData, setFormData] = useState({
@@ -84,7 +84,7 @@ function Db() {
 
     delete formDataCopy.images;
 
-    const docRef = await addDoc(collection(db, 'products'), formDataCopy);
+    // const docRef = await addDoc(collection(db, 'products'), formDataCopy);
 
     toast.success('🦄 Odesláno, vše je OK!', { theme: 'colored' });
   };

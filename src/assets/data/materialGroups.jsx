@@ -31,10 +31,6 @@ const materialGroups = {
     description: 'Punčocháčky s Aloe vera',
     materials: 'Bavlna 70%, Polyamid 28%, Elastan 2%',
   },
-  8: {
-    description: 'Punčocháčky s Aloe vera a nanostříbrem',
-    materials: 'Bavlna 70%, Polyamid 28%, Elastan 2%',
-  },
   9: {
     description: 'Punčocháčky s Aloe vera a nanostříbrem',
     materials: 'Bavlna 65%, Polyamid 33%, Elastan 2%',
@@ -51,7 +47,7 @@ const materialGroups = {
     description: 'Punčocháčky bez chemických přísměsí',
     materials: 'Bambus 90%, Polyamid 10%',
   },
-  11: {
+  13: {
     description: 'Punčocháčky s vysokým podílem bavlny',
     materials: 'Bavlna 90%, Polyamid 10%',
   },

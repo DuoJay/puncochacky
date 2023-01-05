@@ -27,6 +27,7 @@ function Contact() {
           <a
             href="https://m.facebook.com/profile.php?id=100068532589889"
             target="_blank"
+            rel="noreferrer"
           >
             punčocháčky
           </a>
@@ -35,7 +36,11 @@ function Contact() {
       <div className="contact__item">
         <InstagramIcon className="contact__item-icon"></InstagramIcon>
         <span className="contact__item-span">
-          <a href="https://www.instagram.com/puncochacky/" target="_blank">
+          <a
+            href="https://www.instagram.com/puncochacky/"
+            target="_blank"
+            rel="noreferrer"
+          >
             @puncochacky
           </a>
         </span>
