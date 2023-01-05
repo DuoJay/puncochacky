@@ -14,7 +14,7 @@
   --primary-green: #2fac62;
   --header-height: 10rem;
   --navbar-height: 10rem;
-  --test-color: red;
+  --test-color: green;
   --content-height: calc(100vh - var(--header-height) - var(--navbar-height));
 }
 
