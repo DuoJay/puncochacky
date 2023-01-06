@@ -45,8 +45,6 @@ function Db() {
             const progress =
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log('Upload is ' + progress + '% done');
-            toast.success('Nahráno ' + progress + 'procent');
-
             switch (snapshot.state) {
               case 'paused':
                 console.log('Upload is paused');
@@ -75,7 +73,7 @@ function Db() {
     const imgUrls = await Promise.all(
       [...images].map(image => storeImage(image))
     ).catch(() => {
-      toast.error('Ajaj, nenahrané obrázky. kontaktuj Jakuba!');
+      toast.error('Obrázky nenahrány!');
       return;
     });
 

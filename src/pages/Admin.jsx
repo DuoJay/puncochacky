@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useAdminAuth from '../hooks/useAdminAuth';
 import {
   collection,
@@ -56,11 +57,13 @@ function Admin() {
     );
   };
 
-  const onDelete = async productId => {
-    const docRef = doc(db, 'products', productId);
+  const onDelete = async product => {
+    const docRef = doc(db, 'products', product.id);
     try {
+      if (!window.confirm(`Opravdu vymazat ${product.data.name}???`)) return;
       await deleteDoc(docRef);
-      toast.success('Product vymazám');
+      toast.success('Produkt vymazám');
+      window.location.reload();
     } catch (error) {
       toast.error('Problém:', error);
       console.log(error);
@@ -74,7 +77,6 @@ function Admin() {
           className="admin__input"
           type="text"
           placeholder="hledat dle jména"
-          // value={value}
           onChange={onChange}
         />
 
@@ -84,7 +86,7 @@ function Admin() {
               <ProductItem product={product.data}>
                 <button
                   className="admin__delete"
-                  onClick={() => onDelete(product.id)}
+                  onClick={() => onDelete(product)}
                 >
                   X
                 </button>
