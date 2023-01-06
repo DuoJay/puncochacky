@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Category from './pages/Category';
-import SignUp from './pages/SignUp';
+// import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Admin from './pages/Admin';
 import Db from './pages/Db';
