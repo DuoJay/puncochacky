@@ -9,7 +9,8 @@ function Home() {
     <>
       <section className="hero">
         <h1 className="hero__title">
-          Punčocháčky a ponožky <span>LOANA</span>
+          punčocháčky a ponožky značky
+          <div className="hero__loana"></div>
           {/* SUB WITH LOANA LOGO */}
         </h1>
         <p className="hero__paragraph">

@@ -1,6 +1,6 @@
 import Slider from './Slider';
 
-function ProductItem({ product }) {
+function ProductItem({ product, children }) {
   const translateSize = size => {
     switch (size) {
       case 1:
@@ -37,6 +37,7 @@ function ProductItem({ product }) {
       <span className="productItem__size">
         Velikost: {translateSize(product.size)}
       </span>
+      {children}
     </li>
   );
 }

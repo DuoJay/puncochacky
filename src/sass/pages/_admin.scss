@@ -2,5 +2,69 @@
   &__container {
     @include content-container-adjust;
     @include flex-center-both;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 14rem;
+  }
+
+  &__input {
+    display: flex;
+    position: absolute;
+    top: 11rem;
+    z-index: 999;
+    font-size: 2rem;
+    min-width: 50vw;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    background-color: #fff;
+    &:focus {
+      border: 1px solid var(--primary-pink);
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--primary-pink);
+    }
+
+    @include device(tablet-port) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  &__loader {
+    display: flex;
+    justify-content: center;
+    align-items: centers;
+  }
+
+  &__color {
+    font-size: 1.5rem;
+  }
+
+  &__delete {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1000;
+    border: none;
+    background: none;
+    color: red;
+    font-weight: 700;
+    background-color: white;
+    border: 1px solid red;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
   }
 }

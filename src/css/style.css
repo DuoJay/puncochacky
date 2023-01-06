@@ -182,6 +182,7 @@ a {
 }
 
 .productItem {
+  position: relative;
   width: 20rem;
   height: 30rem;
   display: flex;
@@ -223,7 +224,8 @@ a {
 }
 @media only screen and (min-width: 37.5em) {
   .filter__select {
-    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
   }
 }
 .filter__select__option {
@@ -267,6 +269,7 @@ a {
 
 .background-two {
   background-image: url("../assets/logo/snura3.jpg"), linear-gradient(#fff, #fff);
+  background-image: url("../assets/logo/loana-logo.png"), linear-gradient(#fff, #fff);
 }
 
 /* HERO SECTIONS */
@@ -275,12 +278,21 @@ a {
   margin-top: var(--header-height);
 }
 .hero__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-size: 4rem;
   text-align: center;
 }
-.hero__title span {
-  color: var(--primary-pink);
-  letter-spacing: 1rem;
+.hero__loana {
+  background-image: url("../assets/logo/loana-logo.png");
+  width: 30rem;
+  height: 15rem;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero__paragraph {
   font-size: 3rem;
@@ -432,7 +444,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 16.5rem;
+  padding-top: 18rem;
   padding-bottom: 14rem;
 }
 .products__items {
@@ -716,6 +728,67 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 14rem;
+}
+.admin__input {
+  display: flex;
+  position: absolute;
+  top: 11rem;
+  z-index: 999;
+  font-size: 2rem;
+  min-width: 50vw;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid var(--primary-pink);
+  color: var(--primary-pink);
+  background-color: #fff;
+}
+.admin__input:focus {
+  border: 1px solid var(--primary-pink);
+  outline: none;
+}
+.admin__input::placeholder {
+  color: var(--primary-pink);
+}
+@media only screen and (min-width: 37.5em) {
+  .admin__input {
+    min-width: 400px;
+    max-width: 400px;
+  }
+}
+.admin__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.admin__loader {
+  display: flex;
+  justify-content: center;
+  align-items: centers;
+}
+.admin__color {
+  font-size: 1.5rem;
+}
+.admin__delete {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1000;
+  border: none;
+  background: none;
+  color: red;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid red;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
 }
 
 .db {

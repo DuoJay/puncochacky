@@ -15,7 +15,8 @@
     background-color: #fff;
 
     @include device(tablet-port) {
-      width: 400px;
+      min-width: 400px;
+      max-width: 400px;
     }
 
     &__option {

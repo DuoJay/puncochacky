@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,12 +10,11 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from 'firebase/storage';
-// import { addDoc, collection } from 'firebase/firestore';
-// import { db } from '../firebase.config';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase.config';
 
 function Db() {
   const isAdmin = useAdminAuth();
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -55,7 +53,6 @@ function Db() {
                 break;
               case 'running':
                 console.log('Upload is running');
-                toast.success('Nahrává se');
                 break;
               default:
                 break;
@@ -89,7 +86,7 @@ function Db() {
 
     delete formDataCopy.images;
 
-    // const docRef = await addDoc(collection(db, 'products'), formDataCopy);
+    const docRef = await addDoc(collection(db, 'products'), formDataCopy);
 
     toast.success('🦄 Odesláno, vše je OK!', { theme: 'colored' });
   };
