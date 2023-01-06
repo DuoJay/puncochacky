@@ -14,9 +14,11 @@ import ProductItem from '../components/ProductItem';
 import { toast } from 'react-toastify';
 
 function Admin() {
-  const isAdmin = useAdminAuth();
   const [products, setProducts] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState(products);
+
+  const isAdmin = useAdminAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -62,8 +64,8 @@ function Admin() {
     try {
       if (!window.confirm(`Opravdu vymazat ${product.data.name}???`)) return;
       await deleteDoc(docRef);
-      toast.success('Produkt vymazám');
-      window.location.reload();
+      toast.success(`Produkt ${product.data.name} vymazán`);
+      navigate(0);
     } catch (error) {
       toast.error('Problém:', error);
       console.log(error);
