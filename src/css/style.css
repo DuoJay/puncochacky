@@ -637,48 +637,6 @@ a {
   font-size: 2rem;
 }
 
-.signUp__container {
-  min-height: var(--content-height);
-  margin-top: calc(var(--header-height));
-  margin-bottom: var(--navbar-height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signUp__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-items: stretch;
-  height: 100%;
-  padding: 3rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-  background-color: var(--primary-light);
-  border-radius: 15px;
-}
-.signUp__label {
-  font-size: 2rem;
-}
-.signUp__input {
-  display: block;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid var(--primary-pink);
-}
-.signUp__button {
-  color: var(--primary-light);
-  font-size: 1.8rem;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 1.5rem;
-  background-color: var(--primary-pink);
-  border: none;
-  border-radius: 15px;
-}
-
 .signIn__container {
   min-height: var(--content-height);
   margin-top: calc(var(--header-height));

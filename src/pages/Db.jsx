@@ -160,6 +160,8 @@ function Db() {
           <option value="8">74-80</option>
           <option value="9">80-86</option>
           <option value="10">86-91</option>
+          <option value="11">122-128</option>
+          <option value="12">134-146</option>
         </select>
 
         <label htmlFor="type" className="db__form-input">
