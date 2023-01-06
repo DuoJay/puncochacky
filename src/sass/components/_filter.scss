@@ -8,10 +8,11 @@
 
   &__select {
     font-size: 2rem;
-    width: 50vw;
+    min-width: 50vw;
     padding: 1rem;
     border-radius: 15px;
     color: var(--primary-pink);
+    background-color: #fff;
 
     @include device(tablet-port) {
       width: 400px;

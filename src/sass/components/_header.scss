@@ -20,4 +20,29 @@
       height: 100%;
     }
   }
+  &__admin-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    z-index: 1500;
+    top: 20px;
+    right: 20px;
+  }
+  &__button {
+    color: var(--primary-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 1.5rem;
+    background-color: var(--primary-pink);
+    border: none;
+    border-radius: 15px;
+
+    &:hover,
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }

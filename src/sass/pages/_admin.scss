@@ -1,0 +1,6 @@
+.admin {
+  &__container {
+    @include content-container-adjust;
+    @include flex-center-both;
+  }
+}

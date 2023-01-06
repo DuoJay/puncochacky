@@ -1,0 +1,40 @@
+.signIn {
+  &__container {
+    @include content-container-adjust;
+    @include flex-center-both;
+  }
+
+  &__form {
+    @include flex-center-both;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    padding: 3rem;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: 0.1);
+    background-color: var(--primary-light);
+    border-radius: 15px;
+  }
+  &__label {
+    font-size: 2rem;
+  }
+
+  &__input {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary-pink);
+  }
+
+  &__button {
+    color: var(--primary-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 1.5rem;
+    background-color: var(--primary-pink);
+    border: none;
+    border-radius: 15px;
+  }
+}

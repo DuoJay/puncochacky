@@ -29,7 +29,6 @@ const translateSize = size => {
 
 function Filter({ products, setFilteredProducts }) {
   const [sizes, setSizes] = useState('');
-  const [selectedSize, setSelectedSize] = useState('');
 
   useEffect(() => {
     const allProductSizes = products.map(product => product.data.size);
@@ -38,10 +37,9 @@ function Filter({ products, setFilteredProducts }) {
       return [...new Set(numbers)];
     };
     setSizes(removeDuplcates(allProductSizes));
-  }, []);
+  }, [products]);
 
   const handleSizeChange = e => {
-    setSelectedSize(+e.target.value);
     if (!e.target.value) {
       setFilteredProducts(products);
     } else {

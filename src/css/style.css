@@ -63,7 +63,7 @@ a {
   font-weight: 700;
 }
 
-.highlight-purple, .cta__paragraph span:nth-of-type(1), .info__text-paragraph span:nth-of-type(2), .productItem__name {
+.highlight-purple, .cta__paragraph span:nth-of-type(1), .info__text-paragraph span:nth-of-type(2) {
   color: var(--primary-purple);
   font-weight: 700;
 }
@@ -109,6 +109,29 @@ a {
 }
 .header__logo-img {
   height: 100%;
+}
+.header__admin-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  z-index: 1500;
+  top: 20px;
+  right: 20px;
+}
+.header__button {
+  color: var(--primary-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1.5rem;
+  background-color: var(--primary-pink);
+  border: none;
+  border-radius: 15px;
+}
+.header__button:hover, .header__button:active {
+  transform: scale(0.98);
 }
 
 .navbar {
@@ -192,10 +215,11 @@ a {
 }
 .filter__select {
   font-size: 2rem;
-  width: 50vw;
+  min-width: 50vw;
   padding: 1rem;
   border-radius: 15px;
   color: var(--primary-pink);
+  background-color: #fff;
 }
 @media only screen and (min-width: 37.5em) {
   .filter__select {
@@ -599,6 +623,99 @@ a {
 .return-back-icon__span {
   color: var(--primary-pink);
   font-size: 2rem;
+}
+
+.signUp__container {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-light);
+  border-radius: 15px;
+}
+.signUp__label {
+  font-size: 2rem;
+}
+.signUp__input {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary-pink);
+}
+.signUp__button {
+  color: var(--primary-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1.5rem;
+  background-color: var(--primary-pink);
+  border: none;
+  border-radius: 15px;
+}
+
+.signIn__container {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signIn__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-light);
+  border-radius: 15px;
+}
+.signIn__label {
+  font-size: 2rem;
+}
+.signIn__input {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary-pink);
+}
+.signIn__button {
+  color: var(--primary-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1.5rem;
+  background-color: var(--primary-pink);
+  border: none;
+  border-radius: 15px;
+}
+
+.admin__container {
+  min-height: var(--content-height);
+  margin-top: calc(var(--header-height));
+  margin-bottom: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .db {

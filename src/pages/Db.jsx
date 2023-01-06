@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
+import useAdminAuth from '../hooks/useAdminAuth';
 
 import {
   getStorage,
@@ -13,6 +15,9 @@ import {
 // import { db } from '../firebase.config';
 
 function Db() {
+  const isAdmin = useAdminAuth();
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     color: '',
@@ -112,6 +117,10 @@ function Db() {
       }));
     }
   };
+
+  if (!isAdmin) {
+    return;
+  }
 
   return (
     <div className="db">
