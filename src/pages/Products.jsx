@@ -31,7 +31,7 @@ function Products() {
           productsRef,
           where('type', '==', params.categoryName),
           orderBy('color', 'asc'),
-          limit(50)
+          limit(150)
         );
 
         // Execute query

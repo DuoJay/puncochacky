@@ -51,6 +51,7 @@
   }
 
   &__price {
+    letter-spacing: 0px;
   }
 
   transition: all 0.3s ease-in;
@@ -65,8 +66,6 @@
 }
 
 #category-adults {
-  span {
-    letter-spacing: -2px;
-    text-align: center;
-  }
+  letter-spacing: -2px;
+  text-align: center;
 }
