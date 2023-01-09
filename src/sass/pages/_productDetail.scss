@@ -89,6 +89,7 @@
 
 .return-back-icon {
   @include flex-center-both;
+  cursor: pointer;
   position: fixed;
   bottom: 12rem;
   right: 15px;
