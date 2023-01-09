@@ -1,6 +1,16 @@
+import { useContext, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 
+import FilterContext from '../context/FilterContext';
+
 function Category() {
+  const { filteredSize, setFilteredSize } = useContext(FilterContext);
+
+  useEffect(() => {
+    setFilteredSize(0);
+  }, []);
+
   return (
     <div className="category-container">
       <Link className="category" to={'/category/socks'}>

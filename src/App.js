@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { FilterProvider } from './context/FilterContext';
+
 import { ToastContainer } from 'react-toastify';
 
 import Home from './pages/Home';
@@ -16,7 +18,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <>
+    <FilterProvider>
       <Router>
         <Header></Header>
         <Routes>
@@ -36,7 +38,7 @@ function App() {
         <Navbar></Navbar>
       </Router>
       <ToastContainer></ToastContainer>
-    </>
+    </FilterProvider>
   );
 }
 

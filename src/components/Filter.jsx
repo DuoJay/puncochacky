@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+
+import FilterContext from '../context/FilterContext';
 
 const translateSize = size => {
   switch (size) {
@@ -34,23 +36,36 @@ const translateSize = size => {
 function Filter({ products, setFilteredProducts }) {
   const [sizes, setSizes] = useState('');
 
+  const { filteredSize, setFilteredSize } = useContext(FilterContext);
+
   useEffect(() => {
     const allProductSizes = products.map(product => product.data.size);
 
     const removeDuplcates = numbers => {
-      return [...new Set(numbers)];
+      console.log();
+      return [
+        ...new Set(
+          numbers.sort(function (a, b) {
+            return a - b;
+          })
+        ),
+      ];
     };
     setSizes(removeDuplcates(allProductSizes));
   }, [products]);
 
-  const handleSizeChange = e => {
-    if (!e.target.value) {
+  useEffect(() => {
+    if (filteredSize === 0) {
       setFilteredProducts(products);
     } else {
       setFilteredProducts(
-        products.filter(product => product.data.size === +e.target.value)
+        products.filter(product => product.data.size === filteredSize)
       );
     }
+  }, [filteredSize]);
+
+  const handleSizeChange = e => {
+    setFilteredSize(+e.target.value);
   };
 
   return (
@@ -62,8 +77,9 @@ function Filter({ products, setFilteredProducts }) {
             name="size"
             id="size"
             onChange={handleSizeChange}
+            defaultValue={filteredSize}
           >
-            <option className="filter__option" value="" key="allSizes">
+            <option className="filter__option" value={0} key="allSizes">
               Všechny velikosti
             </option>
             {sizes.map(size => {
