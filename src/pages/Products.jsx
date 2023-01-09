@@ -30,7 +30,7 @@ function Products() {
         const q = query(
           productsRef,
           where('type', '==', params.categoryName),
-          orderBy('size', 'desc'),
+          orderBy('color', 'asc'),
           limit(50)
         );
 

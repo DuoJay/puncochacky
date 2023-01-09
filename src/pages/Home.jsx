@@ -14,7 +14,7 @@ function Home() {
           {/* SUB WITH LOANA LOGO */}
         </h1>
         <p className="hero__paragraph">
-          Výprodej skladových zásob znamé, kvalitní <span>české</span> značky za
+          Doprodej skladových zásob znamé, kvalitní <span>české</span> značky za
           příznívé ceny.
         </p>
       </section>
@@ -23,7 +23,7 @@ function Home() {
         <div className="info__text">
           <h2 className="info__text-heading h2">To nejlepší pro děti</h2>
           <p className="info__text-paragraph">
-            Při výrobě byly použiy jen ty <span>nejkvalitnější</span> suroviny
+            Při výrobě byly použity jen ty <span>nejkvalitnější</span> suroviny
             pro pohodlí a zdraví. Ponožky se vyrábí z kvalitní{' '}
             <span>bavlny</span> a <span>bambusu</span> který je hypoalergenní a
             jemnný na dotek. Také obsahují <span>aloe vera</span> jež má
@@ -38,7 +38,7 @@ function Home() {
       <section className="cta">
         <h2 className="cta__heading h2">Co nabízíme</h2>
         <p className="cta__paragraph">
-          Kromě dětských punčocháčků s <span>kšandy</span> nebo bez, si můžete
+          Kromě dětských punčocháčků s <span>kšandami</span> nebo bez, si můžete
           také vybrat z <span>ponožek</span> jak pro <span>děti</span>, tak pro
           dospělé.
         </p>
