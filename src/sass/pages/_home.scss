@@ -19,7 +19,6 @@
   background-size: contain;
   background-position: 50% 50%;
   @supports not (-webkit-touch-callout: none) {
-    background-size: contain;
     background-attachment: fixed;
     background-position: center;
   }
@@ -32,6 +31,7 @@
 .background-two {
   background-image: url('../assets/logo/puncosky-mimi.jpg'),
     linear-gradient(#fff, #fff);
+  background-size: cover;
 }
 
 /* HERO SECTIONS */

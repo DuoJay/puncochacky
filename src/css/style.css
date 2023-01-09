@@ -256,7 +256,6 @@ a {
 @supports not (-webkit-touch-callout: none) {
   .background-one,
   .background-two {
-    background-size: contain;
     background-attachment: fixed;
     background-position: center;
   }
@@ -270,6 +269,7 @@ a {
 
 .background-two {
   background-image: url("../assets/logo/puncosky-mimi.jpg"), linear-gradient(#fff, #fff);
+  background-size: cover;
 }
 
 /* HERO SECTIONS */
