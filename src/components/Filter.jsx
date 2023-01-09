@@ -22,6 +22,10 @@ const translateSize = size => {
       return '80-86';
     case 10:
       return '86-92';
+    case 11:
+      return '122-128';
+    case 12:
+      return '134-146';
     default:
     // code block
   }
