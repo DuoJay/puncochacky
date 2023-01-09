@@ -44,7 +44,7 @@ function Home() {
         </p>
         <button
           onClick={() => {
-            navigate('/products');
+            navigate('/category');
           }}
           className="cta__button"
         >
