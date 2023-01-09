@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 import useAdminAuth from '../hooks/useAdminAuth';
 
 import logo from '../assets/logo/logo.png';
@@ -41,9 +42,9 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="header__logo">
+      <Link className="header__logo" to={'/'}>
         <img src={logo} alt="" className="header__logo-img" />
-      </div>
+      </Link>
       {isAdmin && headerAdminButtons}
     </header>
   );
