@@ -64,7 +64,7 @@ const materialGroups = {
     materials: 'Bavlna 75%, Polyamid 25%',
   },
   17: {
-    description: 'Kvalitní dámské ponožky s jemným svěrem lemu',
+    description: 'Kvalitní ponožky',
     materials: 'Bambus 75%, Polyamid 25%',
   },
 };
