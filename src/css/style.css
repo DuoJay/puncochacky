@@ -578,6 +578,7 @@ a {
   display: block;
   height: 20%;
   text-align: center;
+  text-transform: lowercase;
 }
 @media only screen and (min-width: 48em) {
   .productDetail__heading.smallscreen {

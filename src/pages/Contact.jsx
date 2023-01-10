@@ -29,7 +29,7 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            punčocháčky
+            Punčocháčky.com
           </a>
         </span>
       </div>
@@ -41,7 +41,7 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            @puncochacky
+            @puncochacky.com
           </a>
         </span>
       </div>
