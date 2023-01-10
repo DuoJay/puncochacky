@@ -67,6 +67,10 @@ const materialGroups = {
     description: 'Kvalitní ponožky',
     materials: 'Bambus 75%, Polyamid 25%',
   },
+  18: {
+    description: 'Punčocháčky s Aloe vera',
+    materials: 'Bavlna 69%, Polyamid 29%, Elastan 2%',
+  },
 };
 
 export default materialGroups;
