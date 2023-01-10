@@ -75,6 +75,10 @@ const materialGroups = {
     description: 'Punčocháčky s Aloe vera',
     materials: 'Bavlna 66%, Polyamid 32%, Elastan 2%',
   },
+  20: {
+    description: 'Punčocháčky s Aloe vera',
+    materials: 'Bavlna 72%, Polyamid 26%, Elastan 2%',
+  },
 };
 
 export default materialGroups;
