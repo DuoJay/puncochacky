@@ -25,7 +25,7 @@ function Contact() {
         <FacebookIcon className="contact__item-icon"></FacebookIcon>
         <span className="contact__item-span">
           <a
-            href="https://m.facebook.com/profile.php?id=100068532589889"
+            href="https://facebook.com/profile.php?id=100068532589889"
             target="_blank"
             rel="noreferrer"
           >
