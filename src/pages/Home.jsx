@@ -13,10 +13,7 @@ function Home() {
           <div className="hero__loana"></div>
           {/* SUB WITH LOANA LOGO */}
         </h1>
-        <p className="hero__paragraph">
-          Doprodej skladových zásob znamé, kvalitní <span>české</span> značky za
-          příznivé ceny.
-        </p>
+        <p className="hero__paragraph"></p>
       </section>
       <section className="background-one"></section>
       <section className="info">
