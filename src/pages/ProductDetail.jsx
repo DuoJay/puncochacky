@@ -45,9 +45,17 @@ function ProductDetail() {
             <h4 className="productDetail__description">
               {materialGroups[product.group].description}
             </h4>
+
             <p className="productDetail__materials">
               {materialGroups[product.group].materials}
             </p>
+            {materialGroups[product.group].additional && (
+              <ul className="productDetail__additional">
+                {materialGroups[product.group].additional.map(add => (
+                  <li>{add}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
         <button className="return-back-icon" onClick={() => navigate(-1)}>

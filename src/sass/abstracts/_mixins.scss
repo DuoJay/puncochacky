@@ -29,6 +29,12 @@
       @content;
     }
   }
+  @if $breakpoint == lg-desktop {
+    @media only screen and (min-width: 85em) {
+      //1024px
+      @content;
+    }
+  }
 }
 
 // Main content margins top and bottom adjust

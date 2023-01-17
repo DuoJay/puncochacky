@@ -56,17 +56,25 @@ const materialGroups = {
     materials: 'Bavlna 79%, Polyamid 19%, Elastan 2%',
   },
   15: {
-    description: 'Kvalitní dámské ponožky s přírodního materiálu',
+    description: 'Kvalitní dámské ponožky s přírodního materiálu.',
     materials: 'Bambus 80%, Polyamid 20%',
+    additional: ['antibakteriální účinek', 'zesílená pata a špice'],
   },
   16: {
-    description:
-      'Kvalitní dámské ponožky s jemným svěrem lemu. Hygienická úprava, zesílená pata a špice.',
+    description: 'Kvalitní dámské ponožky s jemným svěrem lemu',
     materials: 'Bavlna 75%, Polyamid 25%',
+    additional: ['hygienická úprava', 'zesílená pata a špice'],
   },
   17: {
-    description: 'Kvalitní ponožky',
-    materials: 'Bambus 75%, Polyamid 25%',
+    description: 'Kvalitní termo ponožky s Aloe vera',
+    materials: 'Bavlna 51%, Polyamid 21%, Polypropylen 28%',
+    additional: [
+      's eukalyptem odpuzujícím hmyz a klíšťata',
+      'supersavá úprava',
+      'plyš ve špici a patě',
+      'pružný lem přes nárt',
+      'ponožka sedí a necestuje v obuvi',
+    ],
   },
   18: {
     description: 'Punčocháčky s Aloe vera',
