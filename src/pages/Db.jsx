@@ -210,6 +210,7 @@ function Db() {
           <option value="21">21</option>
           <option value="22">22</option>
           <option value="23">23</option>
+          <option value="24">24</option>
         </select>
 
         <label htmlFor="images" className="db__form-input">
