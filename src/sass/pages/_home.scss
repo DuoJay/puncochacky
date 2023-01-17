@@ -96,6 +96,9 @@
       span:nth-of-type(4) {
         @extend .highlight-green;
       }
+      span:nth-of-type(5) {
+        @extend .highlight-blue;
+      }
     }
     @include device(desktop) {
       max-width: 45%;

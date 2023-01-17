@@ -23,11 +23,11 @@ function Home() {
         <div className="info__text">
           <h2 className="info__text-heading h2">To nejlepší pro děti</h2>
           <p className="info__text-paragraph">
-            Při výrobě byly použity jen ty <span>nejkvalitnější</span> suroviny
-            pro pohodlí a zdraví. Ponožky se vyrábí z kvalitní{' '}
-            <span>bavlny</span> a <span>bambusu</span> který je hypoalergenní a
-            jemnný na dotek. Také obsahují <span>aloe vera</span> jež má
-            pozitivní účinky na pokožku a zdraví.
+            Při výrobě byly použity jen vysoce kvalitní <span>materiály</span>,
+            pro zajištění co největšího <span>pohodlí.</span> Díky prvkům, jako
+            jsou například <span>aloe vera</span> nebo <span>bambus</span>,
+            který má hypoalergenní účinky, mají naše produkty pozitivní vliv i
+            na <span>Vaše zdraví</span>.
           </p>
         </div>
         <div className="info__image">

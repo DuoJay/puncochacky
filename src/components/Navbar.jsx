@@ -17,6 +17,11 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      {pathMatchRoute('/category') && (
+        <p className="navbar__category-statement">
+          Pro velkoodběratele možnost nákupu za VOC ceny.
+        </p>
+      )}
       <ul className="navbar__items">
         <li
           className={`navbar__item ${pathMatchRoute('/') && 'on-this-page'}`}
