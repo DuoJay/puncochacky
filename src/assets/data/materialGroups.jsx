@@ -60,7 +60,8 @@ const materialGroups = {
     materials: 'Bambus 80%, Polyamid 20%',
   },
   16: {
-    description: 'Kvalitní dámské ponožky s jemným svěrem lemu',
+    description:
+      'Kvalitní dámské ponožky s jemným svěrem lemu. Hygienická úprava, zesílená pata a špice.',
     materials: 'Bavlna 75%, Polyamid 25%',
   },
   17: {
