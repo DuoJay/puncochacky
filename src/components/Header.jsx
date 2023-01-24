@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import useAdminAuth from '../hooks/useAdminAuth';
 
-import logo from '../assets/logo/logo.png';
+import logo from '../assets/logo/logo.webp';
 
 function Header() {
   const isAdmin = useAdminAuth();
@@ -43,7 +43,7 @@ function Header() {
   return (
     <header className="header">
       <Link className="header__logo" to={'/'}>
-        <img src={logo} alt="" className="header__logo-img" />
+        <img src={logo} alt="logo puncochacky" className="header__logo-img" />
       </Link>
       {isAdmin && headerAdminButtons}
     </header>

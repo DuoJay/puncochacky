@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import socksGreen from '../assets/images/socks-green.jpg';
+import socksGreen from '../assets/images/socks-green.webp';
 
 function Home() {
   const navigate = useNavigate();
@@ -10,15 +10,14 @@ function Home() {
       <section className="hero">
         <h1 className="hero__title">
           punčocháčky a ponožky značky
-          <div className="hero__loana"></div>
-          {/* SUB WITH LOANA LOGO */}
+          <div className="hero__loana" title="logo loana"></div>
         </h1>
         <p className="hero__paragraph">
           Doprodej skladových zásob znamé, kvalitní <span>české</span> značky za
           příznivé ceny.
         </p>
       </section>
-      <section className="background-one"></section>
+      <section className="background-one" title="zátiší s punšoškami"></section>
       <section className="info">
         <div className="info__text">
           <h2 className="info__text-heading h2">To nejlepší pro děti</h2>
@@ -31,10 +30,13 @@ function Home() {
           </p>
         </div>
         <div className="info__image">
-          <img src={socksGreen} alt="ponožky" />
+          <img src={socksGreen} alt="zelené ponožky" />
         </div>
       </section>
-      <section className="background-two"></section>
+      <section
+        className="background-two"
+        title="punčošky modří medvídci"
+      ></section>
       <section className="cta">
         <h2 className="cta__heading h2">Co nabízíme</h2>
         <p className="cta__paragraph">
