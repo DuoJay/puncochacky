@@ -35,7 +35,7 @@ function ProductItem({ product, children }) {
   return (
     <li className="productItem polaroid">
       <div className="productItem__images">
-        <Slider images={product.imgUrls}></Slider>
+        <Slider images={product.imgUrls} productName={product.name}></Slider>
       </div>
       <h3 className="productItem__name h3">{product.name}</h3>
       <span className="productItem__size">
