@@ -18,7 +18,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const analytics = getAnalytics();
+// Initialize Analytics and get a reference to the service
+const analytics = getAnalytics(app);
 logEvent(analytics, 'notification_received');
 
 export const db = getFirestore(app);
