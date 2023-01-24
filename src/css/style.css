@@ -15,7 +15,7 @@
   --primary-green: #2fac62;
   --header-height: 10rem;
   --navbar-height: 10rem;
-  --test-color: red;
+  --test-color: green;
   --content-height: calc(100vh - var(--header-height) - var(--navbar-height));
 }
 
@@ -516,13 +516,13 @@ a {
   background-repeat: no-repeat;
 }
 .category .category__image-socks {
-  background-image: url("../assets/images/socks-pink.jpg");
+  background-image: url("../assets/images/category-socks.webp");
 }
 .category .category__image-stockings {
-  background-image: url("../assets/images/stockings-blue.jpg");
+  background-image: url("../assets/images/category-stockings.webp");
 }
 .category .category__image-adults {
-  background-image: url("../assets/images/adults.jpg");
+  background-image: url("../assets/images/category-adults.webp");
 }
 .category__name {
   font-size: 4rem;
