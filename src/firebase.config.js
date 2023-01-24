@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-
+import { getAnalytics, logEvent } from 'firebase/analytics';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,9 +12,13 @@ const firebaseConfig = {
   storageBucket: 'puncochacky-1ff94.appspot.com',
   messagingSenderId: '665328163668',
   appId: '1:665328163668:web:3fab5593d060dc92ac06c1',
+  measurementId: 'G-GS5XEQGWWR',
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore();
+const analytics = getAnalytics();
+logEvent(analytics, 'notification_received');
+
+export const db = getFirestore(app);
