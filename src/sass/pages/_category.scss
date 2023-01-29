@@ -32,15 +32,15 @@
   .category__image {
     &-socks {
       @extend .category-image-container;
-      background-image: url('../assets/images/socks-pink.jpg');
+      background-image: url('../assets/images/category-socks.webp');
     }
     &-stockings {
       @extend .category-image-container;
-      background-image: url('../assets/images/stockings-blue.jpg');
+      background-image: url('../assets/images/category-stockings.webp');
     }
     &-adults {
       @extend .category-image-container;
-      background-image: url('../assets/images/adults.jpg');
+      background-image: url('../assets/images/category-adults.webp');
     }
   }
 
