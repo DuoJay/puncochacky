@@ -7,7 +7,7 @@ import 'swiper/css';
 
 import React from 'react';
 
-function Slider({ images }) {
+function Slider({ images, productName }) {
   return (
     <>
       <Swiper
@@ -25,6 +25,10 @@ function Slider({ images }) {
                 width: '100%',
                 height: '100%',
               }}
+              role="img"
+              alt={productName}
+              aria-label={productName}
+              title={productName}
             ></div>
           </SwiperSlide>
         ))}
