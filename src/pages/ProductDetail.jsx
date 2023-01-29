@@ -35,7 +35,10 @@ function ProductDetail() {
               {product.name}
             </h2>
             <div className="productDetail__images">
-              <Slider images={product.imgUrls}></Slider>
+              <Slider
+                images={product.imgUrls}
+                productName={product.name}
+              ></Slider>
             </div>
           </div>
           <div className="productDetail__right">
