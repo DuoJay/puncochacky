@@ -11,7 +11,7 @@
 /* PARALLAX BACKGROUNDS*/
 .background-one,
 .background-two {
-  background-image: url('../assets/logo/snura-transparent.png'),
+  background-image: url('../assets/logo/snura-transparent.webp'),
     linear-gradient(#fff, #fff);
 
   height: 30vh;
@@ -29,7 +29,7 @@
 }
 
 .background-two {
-  background-image: url('../assets/logo/puncosky-mimi.jpg'),
+  background-image: url('../assets/logo/puncosky-mimi.webp'),
     linear-gradient(#fff, #fff);
   background-size: cover;
 }
@@ -46,7 +46,7 @@
     text-align: center;
   }
   &__loana {
-    background-image: url('../assets/logo/loana-logo.png');
+    background-image: url('../assets/logo/loana-logo.webp');
     width: 30rem;
     height: 15rem;
     background-position: 50% 50%;
