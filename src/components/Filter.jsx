@@ -28,6 +28,8 @@ const translateSize = size => {
       return '122-128';
     case 12:
       return '134-146';
+    case 13:
+      return '14-15';
     default:
     // code block
   }

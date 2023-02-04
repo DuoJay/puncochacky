@@ -108,6 +108,27 @@ const materialGroups = {
     description: 'Punčocháčky s Aloe vera',
     materials: 'Bavlna 87%, Polyamid 13%',
   },
+  26: {
+    description: 'Punčocháčky s Aloe vera',
+    materials: 'Bavlna 80%, Polyamid 18%, Elastan 2%',
+    additional: [
+      'vysoký podíl bavlny',
+      'regulace gumy',
+      'pružnost',
+      'usazený klín',
+      'zesílená pata a špice',
+      'Aloe vera zvláčnující účinky',
+    ],
+  },
+  27: {
+    description: 'Kojenecké ponožky Aloe vera',
+    materials: 'Bavlna 81%, Polyamid 19%',
+    additional: [
+      'vysoký podíl bavlny',
+      'nesvíraný len',
+      'úprava Aloe vera -svěžest',
+    ],
+  },
 };
 
 export default materialGroups;
