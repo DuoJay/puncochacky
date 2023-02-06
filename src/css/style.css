@@ -187,18 +187,19 @@ a {
   font-weight: 400;
 }
 .navbar__category-statement {
-  display: none;
   position: absolute;
   font-size: 2rem;
-  top: -6rem;
+  top: -8.5rem;
   padding: 1rem 2rem 1rem 2rem;
-  background-color: var(--primary-light);
+  max-width: 90vw;
   border-radius: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(231, 27, 105, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 @media only screen and (min-width: 48em) {
   .navbar__category-statement {
-    display: initial;
+    background-color: var(--primary-light);
+    top: -6rem;
   }
 }
 
@@ -485,7 +486,7 @@ a {
   min-height: var(--content-height);
   margin-top: calc(var(--header-height));
   margin-bottom: var(--navbar-height);
-  padding: 4rem 1rem 4rem 1rem;
+  padding: 4rem 1rem 8rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

@@ -49,16 +49,18 @@
   }
 
   &__category-statement {
-    display: none;
     position: absolute;
     font-size: 2rem;
-    top: -6rem;
+    top: -8.5rem;
     padding: 1rem 2rem 1rem 2rem;
-    background-color: var(--primary-light);
+    max-width: 90vw;
+
     border-radius: 25px;
-    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border: 1px solid rgba($color: #e71b69, $alpha: 0.8);
+    background-color: rgba($color: #fff, $alpha: 0.6);
     @include device(tablet-land) {
-      display: initial;
+      background-color: var(--primary-light);
+      top: -6rem;
     }
   }
 }
