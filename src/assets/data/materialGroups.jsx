@@ -115,7 +115,7 @@ const materialGroups = {
       'vysoký podíl bavlny',
       'regulace gumy',
       'pružnost',
-      'usazený klín',
+      'vsazený klín',
       'zesílená pata a špice',
       'Aloe vera zvláčnující účinky',
     ],
@@ -125,7 +125,7 @@ const materialGroups = {
     materials: 'Bavlna 81%, Polyamid 19%',
     additional: [
       'vysoký podíl bavlny',
-      'nesvíraný len',
+      'nesvíravý lem',
       'úprava Aloe vera -svěžest',
     ],
   },
