@@ -19,7 +19,7 @@ function Navbar() {
     <nav className="navbar">
       {pathMatchRoute('/category') && (
         <p className="navbar__category-statement">
-          Pro velkoodběratele možnost nákupu za VOC ceny.
+          Pro velkoodběratele možnost nákupu za VOC.
         </p>
       )}
       <ul className="navbar__items">
