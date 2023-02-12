@@ -18,7 +18,7 @@ function Home() {
           ></div>
         </h1>
         <p className="hero__paragraph">
-          Doprodej skladových zásob znamé, kvalitní <span>české</span> značky za
+          Doprodej skladových zásob známé, kvalitní <span>české</span> značky za
           příznivé ceny.
         </p>
       </section>
