@@ -21,7 +21,7 @@ function Category() {
           title="kategorie ponožky"
         ></div>
         <span className="category__name">ponožky</span>
-        <span className="category__price">25,- za pár</span>
+        <span className="category__price">od 25,- za pár</span>
       </Link>
       <Link className="category" to={'/category/stockings'}>
         <div
@@ -43,7 +43,7 @@ function Category() {
         <span className="category__name" id="category-adults">
           pro dospělé
         </span>
-        <span className="category__price">75,- za pár</span>
+        <span className="category__price">od 75,- za pár</span>
       </Link>
     </div>
   );
